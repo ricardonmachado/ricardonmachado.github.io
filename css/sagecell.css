@@ -195,7 +195,7 @@ header{
 
 header .header-black{
   background-color: #eeeffe; 
-
+  width: 200px;
   height: 300px;
 }
 
