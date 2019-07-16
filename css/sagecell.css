@@ -44,7 +44,7 @@ h6 {
 }
 
 .bg-primary {
-  background-color: #1444f7 !important;
+  background-color: #d6d8f3 !important;
 }
 
 .bg-dark {
@@ -185,12 +185,12 @@ header.masthead {
 }
 
 
-/* header{
+header{
   width: 100%;
   height: 56px;
   background-color: #1444f7;
 
-}*/
+}
 
 
 header .header-black{
