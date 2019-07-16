@@ -184,12 +184,14 @@ header.masthead {
   background-size: cover;
 }
 
-header{
+
+/* header{
   width: 100%;
   height: 56px;
   background-color: #1444f7;
 
-}
+}*/
+
 
 header .header-black{
   background-color: #eeeffe; 
