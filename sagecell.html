@@ -68,7 +68,7 @@ style="background-color: #1444f7"
             </li>
             
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">Derivada</a>
+              <a class="nav-link js-scroll-trigger" href="#derivada">Derivada</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#portfolio">EDO</a>
@@ -199,6 +199,75 @@ style="background-color: #1444f7"
     </section>
 
 
+    <section class="bg-primary" id="derivada">
+      <div class="container">
+        <div class="row">
+          <!--<div class="col-lg-8 mx-auto text-center"> -->
+            <h2 class="section-heading text-black">Derivada</h2>
+            <hr class="light my-4">
+
+<div class="table-responsive">            
+<table class="table">
+  <thead class="thead-dark">
+
+    <tr>
+      <th scope="col">Operação Matemática</th>
+      <th scope="col">Sintaxe Sage</th>
+      <th scope="col">Exemplo</th>
+      <th scope="col">Resultado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Sistema Linear $Av=b$</th>
+      <td>A.solve_right(b)</td>
+      <td> A=matrix([[1,2,6],[1,2,0],[1,-2,3]])<br>
+           b=vector( [1, -1, 1] )<br>
+           A.solve_right(b)
+      </td>
+      <td>( -1/2, -1/4, 1/3 )</td>
+    </tr>
+    <tr>
+      <th scope="row">Núcleo de $A$</th>
+      <td>kernel(A)</td>
+      <td>A=matrix([[1,2,3],[1,2,3],[1,2,3]])<br>
+          kernel(A)</td>
+      <td>(1,0,-1)<br>
+          (0,1,-1)</td>
+    </tr>
+    <tr>
+      <th scope="row">Polinômio caracteristico de $A$</th>
+      <td>A.charpoly()</td>
+      <td>A=matrix([[1,2,3],[1,2,3],[1,2,3]])<br>
+          A.charpoly()</td>
+      <td>x^3 - 6*x^2</td>
+    </tr>
+    <tr>
+      <th scope="row">Autovalores de $A$</th>
+      <td>A.eigenvalues()</td>
+      <td>A=matrix([[1,2,3],[1,2,3],[1,2,3]])<br>
+          A.eigenvalues()</td>
+      <td>[6,0,0]</td>
+    </tr>
+    <tr>
+      <th scope="row">Autovetores de $A$</th>
+      <td>A.eigenvectors_right()</td>
+      <td>A=matrix([[1,2,3],[1,2,3],[1,2,3]])<br>
+          A.eigenvectors_right()</td>
+      <td>[(6,[(1,1,1)],1),(0,[(1,0,-1/3),(0,1,-2/3)],2)]</td>
+    </tr>
+    
+  </tbody>
+</table>
+</div>
+<!--
+            <p class="text-faded mb-4">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
+-->
+            
+          <!--</div>-->
+        </div>
+      </div>
+    </section>
 
 
 
