@@ -60,7 +60,7 @@ style="background-color: #1444f7"
           <ul class="navbar-nav ml-auto">
             
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#page-top">Início</a>
+              <a class="nav-link js-scroll-trigger" href="#page-top">SageCell</a>
             </li>
 
             <li class="nav-item">
@@ -68,10 +68,10 @@ style="background-color: #1444f7"
             </li>
             
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#derivada">Derivada</a>
+              <a class="nav-link js-scroll-trigger" href="#derivada">Cálculo</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio">EDO</a>
+              <a class="nav-link js-scroll-trigger" href="#edo">EDO</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#portfolio">Funções Matemáticas</a>
@@ -79,6 +79,10 @@ style="background-color: #1444f7"
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Gráficos</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Operações</a>
+            </li>
+
           </ul>
         </div>
       </div>
@@ -199,11 +203,92 @@ style="background-color: #1444f7"
     </section>
 
 
-    <section class="bg-primary" id="derivada">
+
+
+
+
+
+
+    <section  id="derivada">
       <div class="container">
         <div class="row">
           <!--<div class="col-lg-8 mx-auto text-center"> -->
-            <h2 class="section-heading text-black">Derivada</h2>
+            <h2 class="section-heading text-black">Cálculo</h2>
+            <hr class="light my-4">
+
+<div class="table-responsive">            
+<table class="table">
+  <thead class="thead-dark">
+
+    <tr>
+      <th scope="col">Operação Matemática</th>
+      <th scope="col">Sintaxe Sage</th>
+      <th scope="col">Exemplo</th>
+      <th scope="col">Resultado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">$\dfrac{df}{dx}$</th>
+      <td>diff(f,x)</td>
+      <td> diff(sqrt(x), x)
+      </td>
+      <td>1/2/sqrt(x)</td>
+    </tr>
+    <tr>
+      <th scope="row">$\dfrac{d^nf}{dx^n}$</th>
+      <td>diff(f,x,n)</td>
+      <td>diff(sin(x), x, 3)</td>
+      <td>-cos(x)</td>
+    </tr>
+    <tr>
+      <th scope="row">$\dfrac{\partial f}{\partial x}$</th>
+      <td>diff(f,x)</td>
+      <td>var('y')<br>
+          diff(x^2+y^2, x)</td>
+      <td>2*x</td>
+    </tr>
+    <tr>
+      <th scope="row">$\dfrac{\partial^2 f}{\partial y \partial y}$</th>
+      <td>diff(f,y,y)</td>
+      <td>var('y')<br>
+          diff(x^2+y^2, y, y)</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th scope="row">$\dfrac{\partial^2 f}{\partial x \partial y}$</th>
+      <td>diff(f,x,y)</td>
+      <td>var('y')<br>
+          diff(x^2+y^2, x, y)</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th scope="row">$\dfrac{\partial^2 f}{\partial y \partial x}$</th>
+      <td>diff(f,y,x)</td>
+      <td>var('y,z')<br>
+          diff(x^2+x*y^2+z^2,y,x)</td>
+      <td>2*y</td>
+    </tr>
+    
+  </tbody>
+</table>
+</div>
+<!--
+            <p class="text-faded mb-4">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
+-->
+            
+          <!--</div>-->
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="bg-primary" id="edo">
+      <div class="container">
+        <div class="row">
+          <!--<div class="col-lg-8 mx-auto text-center"> -->
+            <h2 class="section-heading text-black">EDO</h2>
             <hr class="light my-4">
 
 <div class="table-responsive">            
@@ -268,6 +353,7 @@ style="background-color: #1444f7"
         </div>
       </div>
     </section>
+
 
 
 
