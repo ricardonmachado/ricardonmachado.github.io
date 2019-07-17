@@ -105,7 +105,7 @@ style="background-color: #1444f7"
 
         </div>
         <div class="compute"> 
-          <script type="text/x-sage">plot(sin(x), (x, 0, 2*pi))</script>
+          <script type="text/x-sage"></script>
         </div>  
 
     </div>
@@ -151,6 +151,26 @@ style="background-color: #1444f7"
     </tr>
   </thead>
   <tbody>
+
+    <tr>
+      <th scope="row">$A = \left(\begin{array}{rr} a & b \\c & d \end{array}\right)$</th>
+      <td>matrix([[a,b],[c,d]])</td>
+      <td> A=matrix([[1,2],[1,0]])<br>
+           show(A)
+      </td>
+      <td>$\left(\begin{array}{rr} 1 & 2 \\1 & 0 \end{array}\right)$</td>
+    </tr>
+
+    <tr>
+      <th scope="row">Soma de matrizes: $A + B$</th>
+      <td>A+B</td>
+      <td> A=matrix([[1,2],[1,0]])<br>
+           B=matrix([[0,-1],[1,0]])<br>
+           show(A + B)
+      </td>
+      <td>$\left(\begin{array}{rr} 1 & 1 \\2 & 0 \end{array}\right)$</td>
+    </tr>
+
     <tr>
       <th scope="row">Sistema Linear $Av=b$</th>
       <td>A.solve_right(b)</td>
@@ -168,6 +188,7 @@ style="background-color: #1444f7"
       <td>(1,0,-1)<br>
           (0,1,-1)</td>
     </tr>
+    <!--
     <tr>
       <th scope="row">Polinômio caracteristico de $A$</th>
       <td>A.charpoly()</td>
@@ -188,7 +209,7 @@ style="background-color: #1444f7"
       <td>A=matrix([[1,2,3],[1,2,3],[1,2,3]])<br>
           A.eigenvectors_right()</td>
       <td>[(6,[(1,1,1)],1),(0,[(1,0,-1/3),(0,1,-2/3)],2)]</td>
-    </tr>
+    </tr> -->
     
   </tbody>
 </table>
@@ -228,6 +249,15 @@ style="background-color: #1444f7"
     </tr>
   </thead>
   <tbody>
+
+    <tr>
+      <th scope="row">$\displaystyle \lim_{x\rightarrow a} f(x)$</th>
+      <td>limit(f,x = a)</td>
+      <td> limit( x^2+ 2*x, x = 1)
+      </td>
+      <td>3</td>
+    </tr>
+
     <tr>
       <th scope="row">$\dfrac{df}{dx}$</th>
       <td>diff(f,x)</td>
@@ -241,6 +271,7 @@ style="background-color: #1444f7"
       <td>diff(sin(x), x, 3)</td>
       <td>-cos(x)</td>
     </tr>
+    <!--
     <tr>
       <th scope="row">$\dfrac{\partial f}{\partial x}$</th>
       <td>diff(f,x)</td>
@@ -268,8 +299,16 @@ style="background-color: #1444f7"
       <td>var('y,z')<br>
           diff(x^2+x*y^2+z^2,y,x)</td>
       <td>2*y</td>
-    </tr>
+    </tr> -->
     
+    <tr>
+      <th scope="row">$\displaystyle\int f(x)~dx$</th>
+      <td>integral(f,x)</td>
+      <td>integral(x^3, x)
+      <td>x^4/4</td>
+    </tr>
+
+
   </tbody>
 </table>
 </div>
@@ -323,6 +362,19 @@ style="background-color: #1444f7"
       </td>
       <td>$K_2e^{(-x)}+K_1e^x -x$</td>
     </tr>    
+
+        <tr>
+      <th scope="row">Problema de Valor Inicial <br>
+                      $y'(x) + py(x) = q$ <br>
+                      $y(x_0) = y_0$
+
+      </th>
+      <td>desolve(edo,y,ics=[x_0,y_0])  </td>
+      <td>  y=function('y')(x)<br>
+            desolve(diff(y,x) + y-1,y,ics=[10,2])
+      </td>
+      <td>$(e^{10}+e^x)e^{(-x)}$</td>
+    </tr>    
     
     
   </tbody>
@@ -358,11 +410,27 @@ style="background-color: #1444f7"
   </thead>
   <tbody>
     <tr>
-      <th scope="row">Valor absolute de $x$</th>
+      <th scope="row">Valor absoluto de $x$</th>
       <td>abs(x)</td>
       <td> abs(-2)
       </td>
       <td>2</td>
+    </tr>
+
+    <tr>
+      <th scope="row">Raiz quadrada de $x$</th>
+      <td>sqrt(x)</td>
+      <td> sqrt(225)
+      </td>
+      <td>15</td>
+    </tr>
+
+    <tr>
+      <th scope="row">Logaritmo de $x$ na base $b$</th>
+      <td>log(x,b)</td>
+      <td> log(1024, 2)
+      </td>
+      <td>10</td>
     </tr>
 
     
@@ -404,6 +472,27 @@ style="background-color: #1444f7"
       <td>plot(f, (x, a, b))</td>
       <td> plot(x^2, (x, -1, 1))</td>
     </tr>
+
+    <tr>
+      <th scope="row">Curva Paramétrica</th>
+      <td>parametric_plot( [ x( t ) , y( t ) ], ( t, a, b ) )</td>
+      <td> var( 't' )<br>
+           parametric_plot( [ t^2, t^3 ], ( t, -1 , 1 ) )</td>
+    </tr>
+
+    <tr>
+      <th scope="row">Curva Implícita C</th>
+      <td>  implicit_plot( C, (x, a, b), (y, c, d ) )</td>
+      <td>  var( 'y' )<br>
+            implicit_plot( x^3+y^3 == 3*x*y, ( x, -3, 2 ), ( y, -3, 2 ) )</td>
+    </tr>
+
+    <tr>
+      <th scope="row">Curva em coordenadas Polares</th>
+      <td>polar_plot( r(theta), ( theta, a, b ) )</td>
+      <td> var( 'theta' )<br>
+           polar_plot( theta/2*pi, ( theta, 0, 2*pi ) )</td>
+    </tr>    
   
     
     
@@ -447,6 +536,29 @@ style="background-color: #1444f7"
       <td>1</td>
     </tr>
 
+    <tr>
+      <th scope="row">** ou ^</th>
+      <td>Potenciação</td>
+      <td> 2**5+2^2; x
+      </td>
+      <td>36</td>
+    </tr>
+
+    <tr>
+      <th scope="row">%</th>
+      <td>Módulo</td>
+      <td> 11%2
+      </td>
+      <td>1</td>
+    </tr>
+
+    <tr>
+      <th scope="row">></th>
+      <td>Comparação (maior que) </td>
+      <td> 2>1
+      </td>
+      <td>True</td>
+    </tr>        
     
   </tbody>
 </table>
