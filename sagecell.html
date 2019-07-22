@@ -170,6 +170,59 @@ style="background-color: #1444f7"
     </tr>
 
     <tr>
+      <th scope="row">transposta de $A$</th>
+      <td>transpose(A)</td>
+      <td>A=matrix([[1,2,1],[1,0,1]])<br>
+		  show(transpose(A))
+      </td>
+      <td>$\left(\begin{array}{rr}
+           1 & 1 \\
+           2 & 0 \\
+           1 & 1
+           \end{array}\right)$</td>
+    </tr>
+
+
+    <tr>
+      <th scope="row">Determinante de $A$</th>
+      <td>det(A)<br>
+      	ou<br>
+      	A.det()
+      </td>
+      <td>A=matrix([[1,2],[1,0]])<br>
+          det(A)
+      </td>
+      <td>-2</td>
+    </tr>
+
+
+    <tr>
+      <th scope="row">Inversa de $A$</th>
+      <td>A^(-1)<br>
+      	ou<br>
+      	A.inverse()
+      </td>
+      <td>A=matrix([[1,2],[1,0]])<br>
+          show(A^(-1))
+      </td>
+      <td>$\left(\begin{array}{rr}
+          0 & 1 \\
+          \frac{1}{2} & -\frac{1}{2}
+          \end{array}\right)$</td>
+    </tr>
+
+
+    <tr>
+      <th scope="row">Traço de $A$</th>
+      <td>A.trace()</td>
+      <td>A=matrix([[1,2],[1,0]])<br>
+          A.trace()
+      </td>
+      <td>1</td>
+    </tr>
+
+
+    <tr>
       <th scope="row">Sistema Linear $Av=b$</th>
       <td>A.solve_right(b)</td>
       <td> A=matrix([[1,2,6],[1,2,0],[1,-2,3]])<br>
@@ -224,14 +277,10 @@ style="background-color: #1444f7"
 
 
 
-
-
-
-
     <section  id="derivada">
       <div class="container">
         <div class="row">
-          <!--<div class="col-lg-8 mx-auto text-center"> -->
+          
             <h2 class="section-heading text-black">Cálculo</h2>
             <hr class="light my-4">
 
