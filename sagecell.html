@@ -83,6 +83,10 @@ style="background-color: #1444f7"
               <a class="nav-link js-scroll-trigger" href="#operacoes">Operações</a>
             </li>
 
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#autores">Autores</a>
+            </li>            
+
           </ul>
         </div>
       </div>
@@ -149,6 +153,57 @@ style="background-color: #1444f7"
     </tr>
   </thead>
   <tbody>
+
+
+    <tr>
+      <th scope="row">$\overrightarrow{v} = (a, b, c)$</th>
+      <td>v = vector([a,b,c])</td>
+      <td>v = vector([1,-1,1]); v</td>
+      <td>(1,-1,1)</td>
+    </tr>
+
+    <tr>
+      <th scope="row">$\overrightarrow{u} + \overrightarrow{v}$</th>
+      <td>u+v</td>
+      <td>v = vector([1,-1,1])<br>
+          u = vector([1,1,0])<br>
+		  u + v</td>
+      <td>(2,0,1)</td>
+    </tr>    
+
+    <tr>
+      <th scope="row">$k\overrightarrow{v}$</th>
+      <td>k*v</td>
+      <td>v = vector([1,-1,1])<br>
+		  2*v</td>
+      <td>(2,-2,2)</td>
+    </tr>   
+
+    <tr>
+      <th scope="row">$\langle \overrightarrow{u}, \overrightarrow{v} \rangle$</th>
+      <td>u.dot_product(v)</td>
+      <td>v = vector([1,-1,1])<br>
+      	  u = vector([1,1,0])<br>
+		  u.dot_product(v)</td>
+      <td>0</td>
+    </tr>   
+
+    <tr>
+      <th scope="row">$\overrightarrow{u}\times \overrightarrow{v}$</th>
+      <td>u.cross_product(v)</td>
+      <td>v = vector([1,-1,1])<br>
+      	  u = vector([1,1,0])<br>
+		  u.cross_product(v)</td>
+      <td>(1,-1,-2)</td>
+    </tr>      
+
+    <tr>
+      <th scope="row">$\|\overrightarrow{v}\|$</th>
+      <td>norm(v)</td>
+      <td>v = vector([1,-1,1])<br>
+		  norm(v)</td>
+      <td>sqrt(3)</td>
+    </tr>  
 
     <tr>
       <th scope="row">$A = \left(\begin{array}{rr} a & b \\c & d \end{array}\right)$</th>
@@ -531,6 +586,13 @@ style="background-color: #1444f7"
     </tr>
 
     <tr>
+      <th scope="row">Exponencial na Base $e$</th>
+      <td>exp(x)</td>
+      <td> exp(2)</td>
+      <td>e^2</td>
+    </tr>
+
+    <tr>
       <th scope="row">Logaritmo de $x$ na base $b$</th>
       <td>log(x,b)</td>
       <td> log(1024, 2)
@@ -538,10 +600,58 @@ style="background-color: #1444f7"
       <td>10</td>
     </tr>
 
+    <tr>
+      <th scope="row">Seno de $x$</th>
+      <td>sin(x)</td>
+      <td>sin(pi)</td>
+      <td>1</td>
+    </tr>    
+
+    <tr>
+      <th scope="row">Cosseno de $x$</th>
+      <td>cos(x)</td>
+      <td>cos(pi/2)</td>
+      <td>0</td>
+    </tr>  
+
+    <tr>
+      <th scope="row">Tangente de $x$</th>
+      <td>tan(x)</td>
+      <td>tan(3*pi/4)</td>
+      <td>-1</td>
+    </tr>      
     
-			  </tbody>
-			</table>
-			</div>
+    <tr>
+      <th scope="row">Coeficiente Binomial de $n$ sobre $r$</th>
+      <td>binomial(n,r)</td>
+      <td>binomial(5,2)</td>
+      <td>10</td>
+    </tr>   
+
+    <tr>
+      <th scope="row">Fatorial de $n$</th>
+      <td>factorial(n)</td>
+      <td>factorial(5)</td>
+      <td>120</td>
+    </tr>      
+
+    <tr>
+      <th scope="row">Fatoração em primos</th>
+      <td>factor(n)</td>
+      <td>factor(12)</td>
+      <td>2^2*3</td>
+    </tr>    
+
+    <tr>
+      <th scope="row">MDC de $a$ e $b$</th>
+      <td>gcd(a, b)</td>
+      <td>gcd(12, 16)</td>
+      <td>4</td>
+    </tr>      
+
+	</tbody>
+	</table>
+	</div>
 
         </div>
       </div>
@@ -694,12 +804,47 @@ style="background-color: #1444f7"
     </tr>
 
     <tr>
+      <th scope="row">+</th>
+      <td>Adição</td>
+      <td>2+7</td>
+      <td>9</td>
+    </tr>
+
+    <tr>
+      <th scope="row">-</th>
+      <td>Subtração</td>
+      <td>14.5-0.5</td>
+      <td>14</td>
+    </tr>
+
+    <tr>
+      <th scope="row">*</th>
+      <td>Multiplicação</td>
+      <td>3*9+1</td>
+      <td>28</td>
+    </tr>            
+
+    <tr>
       <th scope="row">** ou ^</th>
       <td>Potenciação</td>
       <td> 2**5+2^2
       </td>
       <td>36</td>
     </tr>
+
+    <tr>
+      <th scope="row">/</th>
+      <td>Divisão</td>
+      <td>225/3</td>
+      <td>75</td>
+    </tr>    
+
+    <tr>
+      <th scope="row">//</th>
+      <td>Quociente Inteiro</td>
+      <td>10//3</td>
+      <td>3</td>
+    </tr>   
 
     <tr>
       <th scope="row">%</th>
@@ -715,8 +860,36 @@ style="background-color: #1444f7"
       <td> 2>1
       </td>
       <td>True</td>
-    </tr>        
+    </tr>  
+
+    <tr>
+      <th scope="row"><</th>
+      <td>Comparação (menor que) </td>
+      <td>4< pi </td>
+      <td>False</td>
+    </tr>    
+
+    <tr>
+      <th scope="row">>=</th>
+      <td>Comparação (maior ou igual) </td>
+      <td>2+3>=5</td>
+      <td>True</td>
+    </tr>                  
     
+    <tr>
+      <th scope="row"><=</th>
+      <td>Comparação (menor ou igual) </td>
+      <td>11<=2*5</td>
+      <td>False</td>
+    </tr>  
+
+    <tr>
+      <th scope="row">!= ou <> </th>
+      <td>Comparação (diferente) </td>
+      <td>21 != 3*7</td>
+      <td>False</td>
+    </tr>  
+
   </tbody>
 </table>
 </div>
@@ -882,150 +1055,96 @@ style="background-color: #1444f7"
 
 
 
-    <section class="bg-primary" id="contact">
+
+
+<!-- Page Features -->
+<section class="bg-primary" id="autores">
+   
+   <div class="container text-center">
+   	<h2 class="section-heading">Autores:<br> </h2>
+   	<hr class="my-4">
+   <div class="row">
+
+
+
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a ><img class="card-img-top" src="img/portfolio/fullsize/leon.png" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="http://www.dm.ufrpe.br/prof/leon" target="_blank">Leon Silva</a>
+                </h4>
+                <!--<h5>$24.99</h5> -->
+                <p class="card-text">Leon Silva, natural de Recife-PE, é professor do Departamento de Matemática da Universidade Federal Rural de Pernambuco desde 2011. É Mestre em Matemática pela UFC e Doutor em Computação pela UFPE. Sua área de pesquisa é Matemática Computacional.</p>
+              </div>
+              <!--
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+              </div> -->
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a ><img class="card-img-top" src="img/portfolio/fullsize/marcelo.jpg" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="http://www.dm.ufrpe.br/prof/marcelo" target="_blank">Marcelo Santos</a>
+                </h4>
+                
+                <p class="card-text">Marcelo Santos, natural de Garanhuns-PE, graduou-se em Matemática na UPE. Obteve mestrado e doutorado em Matemática pela UFPE. Foi professor da UFRN. Atualmente é professor do Departamento de Matemática da Universidade Federal Rural de Pernambuco. Sua área de pesquisa é Mecânica Celeste.</p>
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a ><img class="card-img-top" src="img/portfolio/fullsize/ricardo.jpg" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="https://sites.google.com/site/ricardonunesmachadojr/" target="_blank">Ricardo Machado</a>
+                </h4>
+                
+                <p class="card-text">Ricardo Machado, natural de Timbaúba-PE, é Bacharel, Mestre e Doutor em Matemática pela UFPE, onde foi professor por cinco anos. Desde 2015 é professor do Departamento de Matemática da Universidade Federal Rural de Pernambuco. Sua área de pesquisa é Topologia Combinatória.</p>
+              </div>
+              
+            </div>
+          </div>
+
+</div>
+        </div>
+        </section>
+    <!-- /.row -->
+
+
+	<!--  Tela 7 - contato (início)  -->
+    <section id="contact">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
-          	<hr class="my-4">
-            <h2 class="section-heading">Desenvolvido pelos Professores:<br> 
-            <a href="http://www.dm.ufrpe.br/prof/leon">Leon Silva</a> <br>
-            <a href="http://www.dm.ufrpe.br/prof/marcelo">Marcelo Santos</a> <br>
-            <a href="https://sites.google.com/site/ricardonunesmachadojr/">Ricardo Machado</a>
-
-        	</h2>
-            <hr class="my-4">
-
+            <h2 class="section-heading">Entre em contato com os autores</h2>
+            
             <!--
             <hr class="my-4">
             
-            <p class="mb-5">site principal: <br> 
-            https://sites.google.com/site/ricardonunesmachadojr/</p>
+            <p class="mb-5">Escrever um texto</p> <br>
 			-->
-
-            <!--<i class="fas fa-envelope fa-3x mb-3 sr-contact-2"></i>
+            <i class="fas fa-envelope fa-3x mb-3 sr-contact-2"></i>
             <p>
-              <a href="mailto:your-email@your-domain.com">teste@teste.com</a>
-            </p> -->
-          
-
-
-
-<div class="container-fluid p-0">
-        <div class="row no-gutters popup-gallery">
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/leon.png">
-              <img class="img-fluid" src="img/portfolio/thumbnails/leon.png" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Professor
-                  </div>
-                  <div class="project-name">
-                    Leon Silva
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/marcelo.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/marcelo.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Professor
-                  </div>
-                  <div class="project-name">
-                    Marcelo Santos
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/ric.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/ric.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Professor
-                  </div>
-                  <div class="project-name">
-                    Ricardo Machado
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          
-          
-        </div>
-      </div>
-
-
-
-
+              <a href="mailto:sagectu@gmail.com">sagectu@gmail.com</a>
+            </p>
 
           </div>
-        
-      </div>
-    </section>
 
-<!--
-<section class="p-0" id="portfolio">
-      <div class="container-fluid p-0">
-        <div class="row no-gutters popup-gallery">
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/leon.png">
-              <img class="img-fluid" src="img/portfolio/thumbnails/leon.png" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Professor
-                  </div>
-                  <div class="project-name">
-                    Leon Silva
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/marcelo.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/marcelo.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Professor
-                  </div>
-                  <div class="project-name">
-                    Marcelo Santos
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/ric.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/ric.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Professor
-                  </div>
-                  <div class="project-name">
-                    Ricardo Machado
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          
-          
         </div>
       </div>
     </section>
--->
+    <!--  Tela 7 - contato (fim)  -->
+
+
+
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
