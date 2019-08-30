@@ -1,0 +1,327 @@
+﻿<!DOCTYPE html>
+<html lang="pt">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Poliedros Arquimedianos no SageMath</title>
+    <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+    <script>$(function () {
+    // Make the div with id 'mycell' a Sage cell
+    //sagecell.makeSagecell({inputLocation:  '#mycell',
+    //                       template:       sagecell.templates.minimal,
+    //                       evalButtonText: 'Activate'});
+    // Make *any* div with class 'compute' a Sage cell
+    sagecell.makeSagecell({inputLocation: 'div.compute',
+                           evalButtonText: 'Evaluate'});
+    });
+    </script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/sagecell2.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation 
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #1444f7" id="mainNav">
+
+style="background-color: #1444f7"
+
+    -->
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top"  id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="index.html">Home</a>
+        
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#cubooctaedro">Cuboctaedro</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#icosidodecaedro">Icosidodecaedro</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#calculo">Tetraedro Truncado</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#edo">Cubo Truncado</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#funcoes">Octaedro Truncado</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#graficos">Dodecaedro Truncado</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#operacoes">Icosaedro Truncado</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#autores">Autores</a>
+            </li>            
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+
+   <section class="masthead text-center  d-flex">
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+			<h1 class=" text-uppercase">
+              <strong>Poliedros Arquimedianos</strong>
+            </h1>
+            <hr>
+          </div>
+          <div class="col-lg-8 mx-auto">
+          		
+         <h5 class=" mb-5 ">
+         	Nós calculamos as coordenadas dos Poliedros Arquimedianos usando as coordenadas dos Poliedros Regulares. Usamos a idéia do livro <a href="index.html" target="_blank">Elementos de Computação Matemática com SageMath</a> (Problema 7.5, pag. 285) e da dissertação <a href="http://www.tede2.ufrpe.br:8080/tede2/bitstream/tede2/7893/2/Jose%20Ribamar%20de%20Souza%20Neves.pdf" target="_blank">Poliedros Arquimedianos</a>  de José Ribamar de Souza Nevez. Algumas informações foram obtidas do site: <a href="https://pt.wikipedia.org/wiki/S%C3%B3lido_de_Arquimedes" target="_blank">https://pt.wikipedia.org/wiki/S%C3%B3lido_de_Arquimedes</a></h5>
+
+
+           
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+<section class="bg-primary" id="cubooctaedro">
+    
+<div class="container my-auto">
+
+      <div class="row">
+        
+    
+
+      <div class="row align-items-center my-5">
+      <div class="col-lg-4">
+        <img class="img-fluid rounded mb-4 mb-lg-0" src="img/poliedros/cubooctaedro2.png" alt="">
+      </div>
+      <!-- /.col-lg-8 -->
+      <div class="col-lg-7 mx-auto">
+        <h1 class="font-weight-light">Cubooctaedro</h1>
+        <p>Um cuboctaedro é um poliedro com 8 faces triangulares e 6 faces quadrangulares. O cuboctaedro pode não ser realizado, considerando os pontos médios das arestas e unindo esses pontos por uma aresta, se eles pertencerem a arestas adjacentes de uma face do cubo; mas também pode ser obtido a partir do octaedro, o dual do cubo, considerado como arestas os segmentos que unem os pontos médios dos lados das faces triangulares do octaedro.</p>
+        <a class="btn btn-primary" href="stl/Cuboctaedro.stl">cuboctaedro.stl "para impressão 3D"</a>
+      </div>
+      </div>
+
+
+            <p class="text-faded mb-4"></p>
+
+        </div>
+        <div class="compute"> 
+          <script type="text/x-sage">cuboctaedro = [(0.5, 0.0, 0.5),(0.0, 0.5, 0.5),(0.5, 0.5, 0.0),(0.0, 0.5, 0.5),(-0.5, 0.5, 0.0),(-0.5, 0.0, 0.5),(0.0, -0.5, 0.5),(-0.5, -0.5, 0.0),(-0.5, 0.0, 0.5),(0.5, 0.0, 0.5),(0.0, -0.5, 0.5),(0.5, -0.5, 0.0),(0.5, 0.5, 0.0),(0.5, 0.0, -0.5),(0.0, 0.5, -0.5),(-0.5, 0.5, 0.0),(-0.5, 0.0, -0.5),(0.0, 0.5, -0.5),(0.5, 0.0, -0.5),(0.0, -0.5, -0.5),(0.5, -0.5, 0.0),(-0.5, 0.0, -0.5),(0.0, -0.5, -0.5),(-0.5, -0.5, 0.0)]
+plot(Polyhedron(vertices=cuboctaedro),frame=false, aspect_ratio=(1,1,1), line=False, point=false, color='#33bdf2')</script>
+        </div>  
+
+    </div>
+
+
+        </div>
+      </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <section  id="icosidodecaedro">
+    
+<div class="container my-auto">
+
+      <div class="row">
+        <!--
+        <div class="col-lg-12 mx-auto">
+          <h1 style="color:#1444f7; font-size:30px;">Icosidodecaedro</h1>
+        </div>
+		-->
+
+      <div class="row align-items-center my-5">
+      <div class="col-lg-4">
+        <img class="img-fluid rounded mb-4 mb-lg-0" src="img/poliedros/icosidodecaedro2.png" alt="">
+      </div>
+      <!-- /.col-lg-8 -->
+      <div class="col-lg-7 mx-auto">
+        <h1 class="font-weight-light">Icosidodecaedro</h1>
+        <p>O icosidodecaedro é um Sólido de Arquimedes. É um poliedro com vinte faces triangulares regulares e doze faces pentagonais regulares. Um icosidodecaedro tem 30 vértices idênticos, onde se encontram dois triângulos e dois pentágonos. Tem 60 arestas idênticas, cada uma separando um triângulo de um pentágono.<br>
+		O Poliedro dual do Icosidodecaedro é o Triacontaedro rômbico.</p>
+        <a class="btn btn-primary" href="stl/Icosidodecaedro.stl">Icosidodecaedro.stl "para impressão 3D"</a>
+      </div>
+      </div>
+
+            <p class="text-faded mb-4"></p>
+
+        </div>
+        <div class="compute"> 
+          <script type="text/x-sage">icosidodecaedro = [(-0.16666666666666666, 0.28867513459481287, 0.8726779962499649),(0.3333333333333333, 0.0, 0.8726779962499649),(-0.16666666666666663, -0.28867513459481287, 0.8726779962499649),(0.3333333333333333, 0.0, 0.8726779962499649),(0.7060113295832983, 0.2886751345948129, 0.5393446629166316),(0.7060113295832983, -0.2886751345948129, 0.5393446629166316),(-0.16666666666666666, 0.28867513459481287, 0.8726779962499649),(-0.6030056647916491, 0.4670861794813578, 0.5393446629166316),(-0.10300566479164913, 0.7557613140761708, 0.5393446629166316),(-0.16666666666666663, -0.28867513459481287, 0.8726779962499649),(-0.6030056647916491, -0.46708617948135783, 0.5393446629166316),(-0.10300566479164908, -0.7557613140761708, 0.5393446629166316),(0.7060113295832983, 0.2886751345948129, 0.5393446629166316),(0.43633899812498245, 0.7557613140761708, 0.3333333333333333),(0.8090169943749475, 0.4670861794813579, 0.0),(-0.10300566479164913, 0.7557613140761708, 0.5393446629166316),(-2.7755575615628914e-17, 0.9341723589627158, 0.0),(-0.6030056647916491, 0.4670861794813578, 0.5393446629166316),(-0.8726779962499649, -5.551115123125783e-17, 0.3333333333333333),(-0.8090169943749475, 0.4670861794813579, 0.0),(-0.6030056647916491, -0.46708617948135783, 0.5393446629166316),(-0.8090169943749475, -0.4670861794813579, 0.0),(-0.10300566479164908, -0.7557613140761708, 0.5393446629166316),(0.4363389981249825, -0.7557613140761708, 0.3333333333333333),(2.7755575615628914e-17, -0.9341723589627158, 0.0),(0.4363389981249825, -0.7557613140761708, 0.3333333333333333),(0.7060113295832983, -0.2886751345948129, 0.5393446629166316),(0.8090169943749475, -0.4670861794813579, 0.0),(-0.4363389981249825, 0.7557613140761708, -0.3333333333333333),(-0.8090169943749475, 0.4670861794813579, 0.0),(-0.7060113295832983, 0.2886751345948129, -0.5393446629166316),(-0.4363389981249825, 0.7557613140761708, -0.3333333333333333),(0.10300566479164908, 0.7557613140761708, -0.5393446629166316),(-2.7755575615628914e-17, 0.9341723589627158, 0.0),(0.8726779962499649, 0.0, -0.3333333333333333),(0.6030056647916491, 0.46708617948135783, -0.5393446629166316),(0.8090169943749475, 0.4670861794813579, 0.0),(0.8090169943749475, -0.4670861794813579, 0.0),(0.6030056647916491, -0.4670861794813578, -0.5393446629166316),(-0.4363389981249825, -0.7557613140761708, -0.3333333333333333),(2.7755575615628914e-17, -0.9341723589627158, 0.0),(0.10300566479164913, -0.7557613140761708, -0.5393446629166316),(-0.8090169943749475, -0.4670861794813579, 0.0),(-0.7060113295832983, -0.2886751345948129, -0.5393446629166316),(0.16666666666666663, 0.28867513459481287, -0.8726779962499649),(0.6030056647916491, 0.46708617948135783, -0.5393446629166316),(0.10300566479164908, 0.7557613140761708, -0.5393446629166316),(0.16666666666666666, -0.28867513459481287, -0.8726779962499649),(0.6030056647916491, -0.4670861794813578, -0.5393446629166316),(0.10300566479164913, -0.7557613140761708, -0.5393446629166316),(-0.7060113295832983, -0.2886751345948129, -0.5393446629166316),(-0.3333333333333333, 0.0, -0.8726779962499649),(-0.7060113295832983, 0.2886751345948129, -0.5393446629166316),(0.16666666666666666, -0.28867513459481287, -0.8726779962499649),(-0.3333333333333333, 0.0, -0.8726779962499649),(0.16666666666666663, 0.28867513459481287, -0.8726779962499649)]
+plot(Polyhedron(vertices=icosidodecaedro),frame=false, aspect_ratio=(1,1,1), line=False, point=false, color='#33bdf2')</script>
+        </div>  
+
+    </div>
+
+
+        </div>
+      </div>
+</section>
+
+
+
+
+
+
+
+<!-- Page Features -->
+<section class="bg-primary" id="autores">
+   
+   <div class="container text-center">
+   	<h2 class="section-heading">Autores:<br> </h2>
+   	<hr class="my-4">
+   <div class="row">
+
+
+
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a ><img class="card-img-top" src="img/portfolio/fullsize/leon.jpg" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="http://www.dm.ufrpe.br/prof/leon" target="_blank">Leon Silva</a>
+                </h4>
+                <!--<h5>$24.99</h5> -->
+                <p class="card-text">Leon Silva, natural de Recife-PE, graduou-se em Matemática na UFRPE. É Mestre em Matemática pela UFC e Doutor em Ciência da Computação pela UFPE. Desde 2011 é professor do Departamento de Matemática da Universidade Federal Rural de Pernambuco. Sua área de pesquisa é Matemática Aplicada e Computacional.</p>
+              </div>
+              <!--
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+              </div> -->
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a ><img class="card-img-top" src="img/portfolio/fullsize/marcelo.jpg" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="http://www.dm.ufrpe.br/prof/marcelo" target="_blank">Marcelo Santos</a>
+                </h4>
+                
+                <p class="card-text">Marcelo Santos, natural de Garanhuns-PE, graduou-se em Matemática na UPE. Obteve mestrado e doutorado em Matemática pela UFPE. Foi professor da UFRN. Atualmente é professor do Departamento de Matemática da Universidade Federal Rural de Pernambuco. Sua área de pesquisa é Mecânica Celeste.</p>
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a ><img class="card-img-top" src="img/portfolio/fullsize/ricardo.jpg" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="https://sites.google.com/site/ricardonunesmachadojr/" target="_blank">Ricardo Machado</a>
+                </h4>
+                
+                <p class="card-text">Ricardo Machado, natural de Timbaúba-PE, é Bacharel, Mestre e Doutor em Matemática pela UFPE, onde foi professor por cinco anos. Desde 2015 é professor do Departamento de Matemática da Universidade Federal Rural de Pernambuco. Sua área de pesquisa é Topologia Combinatória.</p>
+              </div>
+              
+            </div>
+          </div>
+
+</div>
+        </div>
+        </section>
+    <!-- /.row -->
+
+
+	<!--  Tela 7 - contato (início)  -->
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading">Entre em contato com os autores</h2>
+            
+            <!--
+            <hr class="my-4">
+            
+            <p class="mb-5">Escrever um texto</p> <br>
+			-->
+            <i class="fas fa-envelope fa-3x mb-3 sr-contact-2"></i>
+            <p>
+              <a href="mailto:sagectu@gmail.com">sagectu@gmail.com</a>
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!--  Tela 7 - contato (fim)  -->
+
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+
+    <!-- Custom scripts for this template -->
+    <script src="js/creative.min.js"></script>
+
+
+
+
+  </body>
+
+</html>
