@@ -33,7 +33,7 @@
     <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/sagecell2.css" rel="stylesheet">
+    <link href="css/principal.css" rel="stylesheet">
 
   </head>
 
@@ -51,7 +51,6 @@ style="background-color: #1444f7"
     <nav class="navbar navbar-expand-lg navbar-light fixed-top"  id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="index.html">Home</a>
-        
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -121,6 +120,35 @@ style="background-color: #1444f7"
 
 
 
+	<!--  Tela 4 - SageMath (início)  -->
+    <section class="bg-primary" id="sagecell">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading ">Cuboctaedro</h2>
+            <img class="img-fluid rounded mb-4 mb-md-0" src="img/poliedros/cubooctaedro2.png" alt="">
+            <hr class=" my-4">
+            <p class="text mb-4">
+             Um <strong>cuboctaedro</strong> é um poliedro com 8 faces triangulares e 6 faces quadrangulares. O cuboctaedro pode não ser realizado, considerando os pontos médios das arestas e unindo esses pontos por uma aresta, se eles pertencerem a arestas adjacentes de uma face do cubo; mas também pode ser obtido a partir do octaedro, o dual do cubo, considerado como arestas os segmentos que unem os pontos médios dos lados das faces triangulares do octaedro.
+			</p>
+            <a class="btn btn-primary" href="stl/Cuboctaedro.stl">cuboctaedro.stl</a>
+            </div>
+            </div>
+            <br>
+          <div class="compute"> 
+          <script type="text/x-sage">cuboctaedro = [(0.5, 0.0, 0.5),(0.0, 0.5, 0.5),(0.5, 0.5, 0.0),(0.0, 0.5, 0.5),(-0.5, 0.5, 0.0),(-0.5, 0.0, 0.5),(0.0, -0.5, 0.5),(-0.5, -0.5, 0.0),(-0.5, 0.0, 0.5),(0.5, 0.0, 0.5),(0.0, -0.5, 0.5),(0.5, -0.5, 0.0),(0.5, 0.5, 0.0),(0.5, 0.0, -0.5),(0.0, 0.5, -0.5),(-0.5, 0.5, 0.0),(-0.5, 0.0, -0.5),(0.0, 0.5, -0.5),(0.5, 0.0, -0.5),(0.0, -0.5, -0.5),(0.5, -0.5, 0.0),(-0.5, 0.0, -0.5),(0.0, -0.5, -0.5),(-0.5, -0.5, 0.0)]
+plot(Polyhedron(vertices=cuboctaedro),frame=false, aspect_ratio=(1,1,1), line=False, point=false, color='#33bdf2')</script>
+        </div>  
+
+          
+        
+      </div>
+	</section>
+	<!--  Tela 4 - SageMath (fim)  -->
+
+
+<!--
+
 <section class="bg-primary" id="cubooctaedro">
 
 <div class="container my-auto">
@@ -153,7 +181,7 @@ plot(Polyhedron(vertices=cuboctaedro),frame=false, aspect_ratio=(1,1,1), line=Fa
 
 
 
-
+-->
 
 
 
