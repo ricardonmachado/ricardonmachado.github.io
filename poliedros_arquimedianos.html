@@ -140,29 +140,7 @@ chamamos essa snubificação de expansão. Usamos a idéia do livro <a href="ind
 
 
 <!-- class="masthead text-center  d-flex" -->
-<!--
-   <section class="bg-dark text-white text-center " >
-      <div class="container my-auto">
-        <div class="row">
-          <div class="col-lg-10 mx-auto">
-			<h1 class=" text-uppercase">
-              Poliedros Arquimedianos
-            </h1>
-            <hr>
-          </div>
-          <div class="col-lg-8 mx-auto">
-          		
-         <h5 class=" mb-5 ">
-         	Nós calculamos as coordenadas dos Poliedros Arquimedianos usando as coordenadas dos Poliedros Regulares. Usamos a idéia do livro <a href="index.html" target="_blank">Elementos de Computação Matemática com SageMath</a> (Problema 7.5, pag. 285) e da dissertação <a href="http://www.tede2.ufrpe.br:8080/tede2/bitstream/tede2/7893/2/Jose%20Ribamar%20de%20Souza%20Neves.pdf" target="_blank">Poliedros Arquimedianos</a>  de José Ribamar de Souza Neves. Algumas informações foram obtidas do site: <a href="https://pt.wikipedia.org/wiki/S%C3%B3lido_de_Arquimedes" target="_blank">https://pt.wikipedia.org</a></h5>
 
-
-           
-          </div>
-        </div>
-      </div>
-    </section>
-
--->
 
 
 
@@ -310,6 +288,45 @@ plot(Polyhedron(vertices=tetraedro_truncado),frame=false, aspect_ratio=(1,1,1), 
       </div>
 	</section>
 	<!--  Tela tetraedro_truncado   -->
+
+
+
+<!--  Tela octaedro_truncado  -->
+    <section   id="octaedro_truncado">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading ">Octaedro Truncado</h2>
+            <img class="img-fluid rounded mb-4 mb-md-0" src="img/poliedros/octaedro_truncado.png" alt="">
+            <hr class=" my-4">
+            <p class="text mb-4">
+             O Octaedro truncado é um sólido de Arquimedes.
+O sólido é obtido por truncatura sobre os vértices do Octaedro.
+Tem 8 faces hexagonais regulares, 6 faces quadradas, 24 vértices e 36 arestas.
+O Poliedro dual do Octaedro truncado é o Hexaedro tetrakis.
+			</p>
+            <hr class=" my-4">
+			<p class="text mb-4">
+             O download do arquivo para impressão 3d pode ser feito clicando no botão abaixo.
+			</p>	
+            <a class="btn btn-primary" href="stl/Icosidodecaedro.stl">Icosidodecaedro.stl</a>
+            </div>
+            </div>
+            <br>
+            
+            
+            
+          <div class="compute"> 
+          <script type="text/x-sage">octaedro_truncado = [(0.0, 0.3333333333333333, 0.6666666666666667),(-0.3333333333333333, 0.0, 0.6666666666666667),(0.3333333333333333, 0.0, 0.6666666666666667),(0.0, -0.3333333333333333, 0.6666666666666667),(0.0, 0.6666666666666667, 0.3333333333333333),(0.3333333333333333, 0.6666666666666667, 0.0),(-0.3333333333333333, 0.6666666666666667, 0.0),(0.0, 0.6666666666666667, -0.3333333333333333),(0.6666666666666667, 0.3333333333333333, 0.0),(0.6666666666666667, 0.0, 0.3333333333333333),(0.6666666666666667, 0.0, -0.3333333333333333),(0.6666666666666667, -0.3333333333333333, 0.0),(0.3333333333333333, 0.0, -0.6666666666666667),(-0.3333333333333333, 0.0, -0.6666666666666667),(0.0, 0.3333333333333333, -0.6666666666666667),(0.0, -0.3333333333333333, -0.6666666666666667),(0.0, -0.6666666666666667, 0.3333333333333333),(0.3333333333333333, -0.6666666666666667, 0.0),(-0.3333333333333333, -0.6666666666666667, 0.0),(0.0, -0.6666666666666667, -0.3333333333333333),(-0.6666666666666667, 0.3333333333333333, 0.0),(-0.6666666666666667, 0.0, 0.3333333333333333),(-0.6666666666666667, 0.0, -0.3333333333333333),(-0.6666666666666667, -0.3333333333333333, 0.0)]
+plot(Polyhedron(vertices=octaedro_truncado),frame=false, aspect_ratio=(1,1,1), line=False, point=false, color='#33bdf2')</script>
+        </div>  
+
+          
+        
+      </div>
+	</section>
+	<!--  Tela octaedro_truncado   -->
+
 
 
 <!-- Page Features -->
