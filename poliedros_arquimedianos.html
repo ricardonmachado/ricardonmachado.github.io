@@ -144,7 +144,7 @@ chamamos essa snubificação de expansão. Usamos a idéia do livro <a href="ind
    	<hr class="my-4">
    <div class="row">
 
-		<div class="col-lg-3 col-sm-6">
+		<div class="col-lg-2 col-sm-6">
           <a class="portfolio-box js-scroll-trigger" href="#cuboctaedro">
             <img class="img-fluid" src="img/poliedros/cuboctaedro.png" alt="">
             <div class="portfolio-box-caption">
@@ -159,7 +159,7 @@ chamamos essa snubificação de expansão. Usamos a idéia do livro <a href="ind
         </div>
 
 
-		<div class="col-lg-3 col-sm-6">
+		<div class="col-lg-2 col-sm-6">
           <a class="portfolio-box js-scroll-trigger" href="#icosidodecaedro">
             <img class="img-fluid" src="img/poliedros/icosidodecaedro.png" alt="">
             <div class="portfolio-box-caption">
@@ -174,7 +174,7 @@ chamamos essa snubificação de expansão. Usamos a idéia do livro <a href="ind
         </div>
 
 
-		<div class="col-lg-3 col-sm-6">
+		<div class="col-lg-2 col-sm-6">
           <a class="portfolio-box js-scroll-trigger" href="#tetraedro_truncado">
             <img class="img-fluid" src="img/poliedros/tetraedro_truncado2.png" alt="">
             <div class="portfolio-box-caption">
@@ -189,7 +189,7 @@ chamamos essa snubificação de expansão. Usamos a idéia do livro <a href="ind
         </div>
 
 
-		<div class="col-lg-3 col-sm-6">
+		    <div class="col-lg-2 col-sm-6">
           <a class="portfolio-box js-scroll-trigger" href="#octaedro_truncado">
             <img class="img-fluid" src="img/poliedros/octaedro_truncado.png" alt="">
             <div class="portfolio-box-caption">
@@ -204,6 +204,47 @@ chamamos essa snubificação de expansão. Usamos a idéia do livro <a href="ind
         </div>
 
 
+        <div class="col-lg-2 col-sm-6">
+          <a class="portfolio-box js-scroll-trigger" href="#cubo_truncado">
+            <img class="img-fluid" src="img/poliedros/cubo_truncado.png" alt="">
+            <div class="portfolio-box-caption">
+              <div class="project-category text-white-50">
+                Poliedro:
+              </div>
+              <div class="project-name">
+                Cubo Truncado
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-2 col-sm-6">
+          <a class="portfolio-box js-scroll-trigger" href="#dodecaedro_truncado">
+            <img class="img-fluid" src="img/poliedros/dodecaedro_truncado.png" alt="">
+            <div class="portfolio-box-caption">
+              <div class="project-category text-white-50">
+                Poliedro:
+              </div>
+              <div class="project-name">
+                Dodecaedro Truncado
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-2 col-sm-6">
+          <a class="portfolio-box js-scroll-trigger" href="#icosaedro_truncado">
+            <img class="img-fluid" src="img/poliedros/icosaedro_truncado.png" alt="">
+            <div class="portfolio-box-caption">
+              <div class="project-category text-white-50">
+                Poliedro:
+              </div>
+              <div class="project-name">
+                Icosaedro Truncado
+              </div>
+            </div>
+          </a>
+        </div>                
 
 
 		</div>
@@ -396,12 +437,122 @@ plot(Polyhedron(vertices=octaedro_truncado),frame=false, aspect_ratio=(1,1,1), l
 
 
 
+<!--  Tela octaedro_truncado  -->
+    <section  class="bg-primary" id="cubo_truncado">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading ">Cubo Truncado</h2>
+            <img class="img-fluid rounded mb-4 mb-md-0" src="img/poliedros/cubo_truncado.png" alt="">
+            <hr class=" my-4">
+            <p class="text mb-4">
+             O Cubo Truncado é obtido através do truncamento tipo-2 feito no
+cubo. O cubo possui 6 faces quadradas, 12 arestas e 8 vértices, portanto, fazendo o truncamento tipo-2 neste poliedro, obtemos 6 faces octogonais (mesma quantidade das faces do cubo) mais 8 faces triangulares (que foi formada a partir dos 8 vértices do
+cubo), formando um total de 14 faces.
+      </p>
+            <hr class=" my-4">
+      <p class="text mb-4">
+             O download do arquivo para impressão 3d pode ser feito clicando no botão abaixo.
+      </p>  
+            <a class="btn btn-primary" href="stl/Icosidodecaedro.stl">Icosidodecaedro.stl</a>
+            </div>
+            </div>
+            <br>
+            
+            
+            
+          <div class="compute"> 
+          <script type="text/x-sage">cubo_truncado = [(0.5, 0.20710678118654746, 0.5),(0.20710678118654746, 0.5, 0.5),(0.5, 0.5, 0.20710678118654746),(-0.20710678118654746, 0.5, 0.5),(-0.5, 0.5, 0.20710678118654746),(-0.5, 0.20710678118654746, 0.5),(-0.20710678118654746, -0.5, 0.5),(-0.5, -0.5, 0.20710678118654746),(-0.5, -0.20710678118654746, 0.5),(0.5, -0.20710678118654746, 0.5),(0.20710678118654746, -0.5, 0.5),(0.5, -0.5, 0.20710678118654746),(0.5, 0.5, -0.20710678118654746),(0.5, 0.20710678118654746, -0.5),(0.20710678118654746, 0.5, -0.5),(-0.5, 0.5, -0.20710678118654746),(-0.5, 0.20710678118654746, -0.5),(-0.20710678118654746, 0.5, -0.5),(0.5, -0.20710678118654746, -0.5),(0.20710678118654746, -0.5, -0.5),(0.5, -0.5, -0.20710678118654746),(-0.5, -0.20710678118654746, -0.5),(-0.20710678118654746, -0.5, -0.5),(-0.5, -0.5, -0.20710678118654746)]
+plot(Polyhedron(vertices=cubo_truncado),frame=false, aspect_ratio=(1,1,1), line=False, point=false, color='#33bdf2')</script>
+        </div>  
+
+          
+        
+      </div>
+  </section>
+  <!--  Tela cubo_truncado   -->
 
 
 
 
 
+<!--  Tela dodecaedro_truncado  -->
+    <section   id="dodecaedro_truncado">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading ">Dodecaedro Truncado</h2>
+            <img class="img-fluid rounded mb-4 mb-md-0" src="img/poliedros/dodecaedro_truncado.png" alt="">
+            <hr class=" my-4">
+            <p class="text mb-4">
+             O Dodecaedro Truncado é obtido através do truncamento tipo-2 feito
+no dodecaedro regular. O dodecaedro regular possui 12 faces pentagonais, 30
+arestas e 20 vértices, portanto, fazendo o truncamento tipo-2 neste poliedro, obtemos
+12 faces decágonos regulares (mesma quantidade das faces pentagonais do dodecaedro) mais
+20 faces triângulos equiláteros (que foi formada a partir dos 20 vértices do dodecaedro),
+formando um total de 32 faces.
+      </p>
+            <hr class=" my-4">
+      <p class="text mb-4">
+             O download do arquivo para impressão 3d pode ser feito clicando no botão abaixo.
+      </p>  
+            <a class="btn btn-primary" href="stl/Icosidodecaedro.stl">Icosidodecaedro.stl</a>
+            </div>
+            </div>
+            <br>
+            
+            
+            
+          <div class="compute"> 
+          <script type="text/x-sage">dodecaedro_truncado = [(-0.09213106741667366, 0.1595756897212323, 0.9296181273332773),(0.18426213483334733, 0.0, 0.9296181273332773),(-0.09213106741667365, -0.1595756897212323, 0.9296181273332773),(0.4824045318333193, 0.0, 0.8157378651666527),(0.6884158614166176, 0.15957568972123232, 0.6314757303333053),(0.6884158614166176, -0.15957568972123232, 0.6314757303333053),(-0.24120226591665966, 0.41777457946839347, 0.8157378651666527),(-0.4824045318333193, 0.5163977794943222, 0.6314757303333053),(-0.2060113295832983, 0.6759734692155546, 0.6314757303333053),(-0.2412022659166596, -0.41777457946839347, 0.8157378651666527),(-0.4824045318333192, -0.5163977794943222, 0.6314757303333053),(-0.20601132958329824, -0.6759734692155546, 0.6314757303333053),(0.7236067977499789, 0.4177745794683935, 0.4472135954999579),(0.574535599249993, 0.6759734692155547, 0.3333333333333333),(0.7805469288332912, 0.5163977794943223, 0.14907119849998599),(2.7755575615628914e-17, 0.8355491589367869, 0.4472135954999579),(0.05694013108331229, 0.9341723589627158, 0.14907119849998599),(0.29814239699997197, 0.8355491589367869, 0.3333333333333333),(-0.7236067977499789, 0.4177745794683934, 0.4472135954999579),(-0.8726779962499649, 0.1595756897212323, 0.3333333333333333),(-0.8374870599166035, 0.4177745794683934, 0.14907119849998599),(-0.7236067977499789, -0.4177745794683934, 0.4472135954999579),(-0.8374870599166035, -0.41777457946839347, 0.14907119849998599),(-0.8726779962499649, -0.15957568972123234, 0.3333333333333333),(8.326672684688674e-17, -0.8355491589367868, 0.4472135954999579),(0.298142396999972, -0.8355491589367869, 0.3333333333333333),(0.05694013108331235, -0.9341723589627157, 0.14907119849998599),(0.574535599249993, -0.6759734692155546, 0.3333333333333333),(0.7236067977499789, -0.4177745794683935, 0.4472135954999579),(0.7805469288332912, -0.5163977794943223, 0.14907119849998599),(-0.574535599249993, 0.6759734692155546, -0.3333333333333333),(-0.7805469288332912, 0.5163977794943223, -0.14907119849998599),(-0.7236067977499789, 0.4177745794683935, -0.4472135954999579),(-0.298142396999972, 0.8355491589367869, -0.3333333333333333),(-8.326672684688674e-17, 0.8355491589367868, -0.4472135954999579),(-0.05694013108331235, 0.9341723589627157, -0.14907119849998599),(0.8726779962499649, 0.15957568972123234, -0.3333333333333333),(0.7236067977499789, 0.4177745794683934, -0.4472135954999579),(0.8374870599166035, 0.41777457946839347, -0.14907119849998599),(0.8374870599166035, -0.4177745794683934, -0.14907119849998599),(0.8726779962499649, -0.1595756897212323, -0.3333333333333333),(0.7236067977499789, -0.4177745794683934, -0.4472135954999579),(-0.29814239699997197, -0.8355491589367869, -0.3333333333333333),(-0.05694013108331229, -0.9341723589627158, -0.14907119849998599),(-2.7755575615628914e-17, -0.8355491589367869, -0.4472135954999579),(-0.7805469288332912, -0.5163977794943223, -0.14907119849998599),(-0.574535599249993, -0.6759734692155547, -0.3333333333333333),(-0.7236067977499789, -0.4177745794683935, -0.4472135954999579),(0.2412022659166596, 0.41777457946839347, -0.8157378651666527),(0.4824045318333192, 0.5163977794943222, -0.6314757303333053),(0.20601132958329824, 0.6759734692155546, -0.6314757303333053),(0.24120226591665966, -0.41777457946839347, -0.8157378651666527),(0.4824045318333193, -0.5163977794943222, -0.6314757303333053),(0.2060113295832983, -0.6759734692155546, -0.6314757303333053),(-0.6884158614166176, -0.15957568972123232, -0.6314757303333053),(-0.4824045318333193, 0.0, -0.8157378651666527),(-0.6884158614166176, 0.15957568972123232, -0.6314757303333053),(0.09213106741667366, -0.1595756897212323, -0.9296181273332773),(-0.18426213483334733, 0.0, -0.9296181273332773),(0.09213106741667365, 0.1595756897212323, -0.9296181273332773)]
+plot(Polyhedron(vertices=dodecaedro_truncado),frame=false, aspect_ratio=(1,1,1), line=False, point=false, color='#33bdf2')</script>
+        </div>  
 
+          
+        
+      </div>
+  </section>
+  <!--  Tela dodecaedro_truncado   -->
+
+
+
+
+
+<!--  Tela icosaedro_truncado  -->
+    <section  class="bg-primary" id="icosaedro_truncado">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading ">Icosaedro Truncado</h2>
+            <img class="img-fluid rounded mb-4 mb-md-0" src="img/poliedros/icosaedro_truncado.png" alt="">
+            <hr class=" my-4">
+            <p class="text mb-4">
+             O Icosaedro Truncado é obtido através do truncamento tipo-2 feito
+no icosaedro regular. O icosaedro regular possui 20 faces triangulares, 30 arestas e 12 vértices, portanto, fazendo o truncamento tipo-2 neste poliedro, obtemos 20
+faces hexágonos regulares mais 12 faces pentágonos regulares (que foi formada a partir
+dos 12 vértices do Icosaedro), formando um total de 32 faces.
+      </p>
+            <hr class=" my-4">
+      <p class="text mb-4">
+             O download do arquivo para impressão 3d pode ser feito clicando no botão abaixo.
+      </p>  
+            <a class="btn btn-primary" href="stl/Icosidodecaedro.stl">Icosidodecaedro.stl</a>
+            </div>
+            </div>
+            <br>
+            
+            
+            
+          <div class="compute"> 
+          <script type="text/x-sage">icosaedro_truncado = [(5.551115123125783e-17, 0.27851638631226233, 0.6314757303333054),(0.2412022659166597, 0.1392581931561312, 0.6314757303333054),(0.4209838202222036, 0.27851638631226233, 0.4706742197221989),(0.030710355805557893, 0.5038408760507805, 0.4706742197221989),(0.290892665416655, 0.5038408760507805, 0.3712934207222083),(-0.24120226591665964, 0.1392581931561311, 0.6314757303333054),(-0.4516941760277614, 0.22532448973851818, 0.4706742197221989),(-0.24120226591665964, -0.13925819315613117, 0.6314757303333054),(-0.45169417602776135, -0.22532448973851824, 0.4706742197221989),(-0.58178533083331, -2.2204460492503132e-17, 0.3712934207222083),(0.2412022659166597, -0.1392581931561312, 0.6314757303333054),(5.551115123125783e-17, -0.27851638631226233, 0.6314757303333054),(0.29089266541665504, -0.5038408760507805, 0.3712934207222083),(0.03071035580555795, -0.5038408760507805, 0.4706742197221989),(0.4209838202222036, -0.27851638631226233, 0.4706742197221989),(0.6007653745277475, 0.13925819315613114, 0.30987270911109244),(0.6504557740277428, 0.2253244897385182, 0.04969039949999535),(0.6007653745277475, -0.13925819315613114, 0.30987270911109244),(0.6811661298333007, 0.0, -0.1111111111111111),(0.6504557740277428, -0.2253244897385182, 0.04969039949999535),(-0.42098382022220354, 0.45064897947703647, 0.30987270911109244),(-0.17978155430554388, 0.5899071726331676, 0.30987270911109244),(-0.13009115480554856, 0.6759734692155547, 0.04969039949999535),(-0.5203646192221942, 0.45064897947703647, 0.04969039949999535),(-0.34058306491665036, 0.5899071726331676, -0.1111111111111111),(-0.4209838202222035, -0.45064897947703647, 0.30987270911109244),(-0.17978155430554382, -0.5899071726331676, 0.30987270911109244),(-0.1300911548055485, -0.6759734692155547, 0.04969039949999535),(-0.5203646192221941, -0.45064897947703647, 0.04969039949999535),(-0.34058306491665025, -0.5899071726331676, -0.1111111111111111),(-0.2908926654166549, -0.5038408760507805, -0.3712934207222083),(-0.030710355805557893, -0.5038408760507805, -0.4706742197221989),(-0.4209838202222035, -0.27851638631226233, -0.4706742197221989),(-0.24120226591665966, -0.1392581931561312, -0.6314757303333054),(2.7755575615628914e-17, -0.27851638631226233, -0.6314757303333054),(0.45169417602776146, 0.2253244897385182, -0.4706742197221989),(0.5817853308333101, 0.0, -0.3712934207222083),(0.24120226591665972, 0.13925819315613114, -0.6314757303333054),(0.45169417602776146, -0.2253244897385182, -0.4706742197221989),(0.24120226591665972, -0.13925819315613114, -0.6314757303333054),(-0.4209838202222035, 0.27851638631226233, -0.4706742197221989),(-0.03071035580555795, 0.5038408760507805, -0.4706742197221989),(-0.29089266541665504, 0.5038408760507805, -0.3712934207222083),(-2.7755575615628914e-17, 0.27851638631226233, -0.6314757303333054),(-0.24120226591665966, 0.1392581931561312, -0.6314757303333054),(-0.6504557740277428, 0.22532448973851818, -0.04969039949999532),(-0.6811661298333006, -2.2204460492503132e-17, 0.11111111111111113),(-0.6007653745277475, 0.1392581931561311, -0.30987270911109244),(-0.6504557740277427, -0.22532448973851824, -0.04969039949999532),(-0.6007653745277474, -0.13925819315613117, -0.30987270911109244),(0.34058306491665036, -0.5899071726331676, 0.11111111111111113),(0.5203646192221942, -0.45064897947703647, -0.04969039949999532),(0.13009115480554861, -0.6759734692155547, -0.04969039949999532),(0.17978155430554393, -0.5899071726331676, -0.30987270911109244),(0.4209838202222036, -0.45064897947703647, -0.30987270911109244),(0.3405830649166503, 0.5899071726331676, 0.11111111111111113),(0.5203646192221942, 0.45064897947703647, -0.04969039949999532),(0.1300911548055485, 0.6759734692155547, -0.04969039949999532),(0.17978155430554388, 0.5899071726331676, -0.30987270911109244),(0.42098382022220354, 0.45064897947703647, -0.30987270911109244)]
+plot(Polyhedron(vertices=icosaedro_truncado),frame=false, aspect_ratio=(1,1,1), line=False, point=false, color='#33bdf2')</script>
+        </div>  
+
+          
+        
+      </div>
+  </section>
+  <!--  Tela icosaedro_truncado   -->
 
 
 
