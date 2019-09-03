@@ -100,7 +100,9 @@ style="background-color: #1444f7"
 são truncamentos (cortes), que são de dois tipos, ou snubificação, operação que consiste
 em afastar todas as faces (rotacionando-as ou não) do poliedro primitivo e preenchendo os
 espaços vazios com polígonos regulares. Quando as faces são afastadas sem rotacionarmos,
-chamamos essa snubificação de expansão. Usamos a idéia do livro <a href="index.html" target="_blank">Elementos de Computação Matemática com SageMath</a> (Problema 7.5, pag. 285) e da dissertação <a href="http://www.tede2.ufrpe.br:8080/tede2/bitstream/tede2/7893/2/Jose%20Ribamar%20de%20Souza%20Neves.pdf" target="_blank">Poliedros Arquimedianos</a>  de José Ribamar de Souza Neves. </h5>
+chamamos essa snubificação de expansão. Usamos a idéia do livro <a href="index.html" target="_blank">Elementos de Computação Matemática com SageMath</a> (Problema 7.5, pag. 285) para fazer os truncamentos.
+Adaptamos alguns trechos da dissertação <a href="http://www.tede2.ufrpe.br:8080/tede2/bitstream/tede2/7893/2/Jose%20Ribamar%20de%20Souza%20Neves.pdf" target="_blank">Poliedros Arquimedianos</a>  de José Ribamar de Souza Neves e usamos a idéia da Seção 3.6 para expansão de poliedros.
+</h5>
           </div>
         </div>
       </div>
@@ -150,14 +152,13 @@ chamamos essa snubificação de expansão. Usamos a idéia do livro <a href="ind
    	<div class="col-lg-9 mx-auto text-center">
 <p class="text mb-4"> Das várias formas que existem para se truncar um poliedro, utilizaremos apenas
 duas delas e vamos denominá-las de truncamento tipo-1 e tipo-2. No truncamento tipo-1
-o corte é feito pelos pontos médios das arestas que concorrem no mesmo vértice (ver figura
-45) e no tipo-2 o corte é feito de tal forma que a face do novo poliedro seja um polígono
+o corte é feito pelos pontos médios das arestas que concorrem no mesmo vértice e no tipo-2 o corte é feito de tal forma que a face do novo poliedro seja um polígono
 regular que tenha o dobro do número de lados da face do poliedro primitivo (antes do
-corte) (ver figura 46).
+corte).
 Independente do tipo de truncamento, cada vértice se transforma em uma nova
 face. Além disso, as partes retiradas sempre serão pirâmides regulares, onde o número de
 lados do polígono da base será igual ao número de arestas que concorrem num mesmo
-vértice (m), e o corte será perpendicular ao eixo de pirâmide.</p>
+vértice, e o corte será perpendicular ao eixo de pirâmide.</p>
 	</div>
 
 
@@ -343,7 +344,11 @@ vértice (m), e o corte será perpendicular ao eixo de pirâmide.</p>
             <img class="img-fluid rounded mb-4 mb-md-0" src="img/poliedros/cubooctaedro2.png" alt="">
             <hr class=" my-4">
             <p class="text mb-4">
-             Um <strong>cuboctaedro</strong> é um poliedro com 8 faces triangulares e 6 faces quadrangulares. O cuboctaedro pode não ser realizado, considerando os pontos médios das arestas e unindo esses pontos por uma aresta, se eles pertencerem a arestas adjacentes de uma face do cubo; mas também pode ser obtido a partir do octaedro, o dual do cubo, considerado como arestas os segmentos que unem os pontos médios dos lados das faces triangulares do octaedro.
+             Fazendo o truncamento tipo-1 no cubo ou no octaedro regular, obtemos o
+cuboctaedro. De fato o octaedro possui 8 faces triângulos equiláteros,
+12 arestas, 6 vértices e m = 4, portanto após o truncamento vamos obter 8 faces triângulos
+equiláteros (mesma quantidade de faces do octaedro) mais 6 faces quadradas (que foi
+formada a partir dos 6 vértices do octaedro). Com isso teremos um total de 14 faces.
 			</p>
             <hr class=" my-4">
 			<p class="text mb-4">
@@ -417,8 +422,10 @@ plot(Polyhedron(vertices=cuboctaedro),frame=false, aspect_ratio=(1,1,1), line=Fa
             <img class="img-fluid rounded mb-4 mb-md-0" src="img/poliedros/icosidodecaedro2.png" alt="">
             <hr class=" my-4">
             <p class="text mb-4">
-             O <strong>icosidodecaedro</strong> é um Sólido de Arquimedes. É um poliedro com vinte faces triangulares regulares e doze faces pentagonais regulares. Um icosidodecaedro tem 30 vértices idênticos, onde se encontram dois triângulos e dois pentágonos. Tem 60 arestas idênticas, cada uma separando um triângulo de um pentágono.<br>
-		     O Poliedro dual do Icosidodecaedro é o Triacontaedro rômbico.
+             Fazendo o truncamento tipo-1 no dodecaedro regular ou no icosaedro regular, obtemos o Icosidodecaedro. De fato o dodecaedro regular possui 12
+faces pentágonos regulares, 30 arestas e 20 vértices, portanto após o truncamento
+vamos obter 12 faces pentágono regulares (mesma quantidade de faces do dodecaedro) mais
+20 faces triângulos equiláteros (que foi formada a partir dos 20 vértices do dodecaedro). Com isso teremos um total de 32 faces.
 			</p>
             <hr class=" my-4">
 			<p class="text mb-4">
@@ -454,7 +461,11 @@ plot(Polyhedron(vertices=icosidodecaedro),frame=false, aspect_ratio=(1,1,1), lin
             <img class="img-fluid rounded mb-4 mb-md-0" src="img/poliedros/tetraedro_truncado2.png" alt="">
             <hr class=" my-4">
             <p class="text mb-4">
-             O <strong>tetraedro truncado</strong> é um sólido de Arquimedes. Tem 4 faces hexagonais regulares, 4 triângulos equiláteros, 12 vértices e 18 arestas (de dois tipos). Pode ser construído truncando todos os 4 vértices de um tetraedro regular e, um terço do tamanho da aresta.
+             O Tetraedro Truncado é obtido através do truncamento tipo-2 feito
+no tetraedro regular. O tetraedro regular possui 4 faces triangulares, 6 arestas e
+4 vértices, portanto, fazendo o truncamento tipo-2 nesse poliedro, obtemos 4 faces
+hexagonais (mesma quantidade do tetraedro) mais 4 faces triangulares (que foi formada
+a partir dos 4 vértices do tetraedro), formando um total de 8 faces.
 			</p>
             <hr class=" my-4">
 			<p class="text mb-4">
@@ -489,10 +500,11 @@ plot(Polyhedron(vertices=tetraedro_truncado),frame=false, aspect_ratio=(1,1,1), 
             <img class="img-fluid rounded mb-4 mb-md-0" src="img/poliedros/octaedro_truncado.png" alt="">
             <hr class=" my-4">
             <p class="text mb-4">
-             O Octaedro truncado é um sólido de Arquimedes.
-O sólido é obtido por truncatura sobre os vértices do Octaedro.
-Tem 8 faces hexagonais regulares, 6 faces quadradas, 24 vértices e 36 arestas.
-O Poliedro dual do Octaedro truncado é o Hexaedro tetrakis.
+             O Octaedro Truncado é obtido através do truncamento tipo-2 feito
+no octaedro regular. O octaedro regular possui 8 faces triângulos, 12 arestas e
+6 vértices, portanto, fazendo o truncamento tipo-2 neste poliedro, obtemos 8
+faces hexagonais (mesma quantidade das faces do octaedro) mais 6 faces quadradas (que
+foi formada a partir dos 6 vértices do octaedro), formando um total de 14 faces.
 			</p>
             <hr class=" my-4">
 			<p class="text mb-4">
@@ -741,7 +753,8 @@ G.show(frame=False)</script>
         <br>
             
           <div class="compute"> 
-          <script type="text/x-sage">polytopes.truncated_icosidodecahedron().plot(frame=false, point=false, color='#33bdf2', thickness=2)</script>
+          <script type="text/x-sage">#Icosidodecaedro Truncado com ajuste
+polytopes.truncated_icosidodecahedron().plot(frame=false, point=false, color='#33bdf2', thickness=2)</script>
         </div>  
 
           
@@ -889,9 +902,10 @@ triângulos, quadrados ou pentágonos, dependendo do valor de m.</p>
             <img class="img-fluid rounded mb-4 mb-md-0" src="img/poliedros/rombicuboctaedro.png" alt="">
             <hr class=" my-4">
             <p class="text mb-4">
-             O Rombicuboctaedro é um sólido de Arquimedes. Este sólido é obtido por expansão do Cubo.
-			 As suas faces são oito triângulos equiláteros e dezoito quadrados. Tem 24 vértices idênticos, onde se encontram um triângulo e três quadrados.
-			 O Poliedro dual do Rombicuboctaedro é o Icositetraedro deltoidal.
+             Fazendo a expansão no cubo ou no octaedro regular, obtemos o
+rombicuboctaedro. O cubo, que possui 6 faces
+quadradas, 12 arestas e 8 vértices. Com a expansão das faces do cubo, as 12 arestas formarão mais 12 quadrados. Teremos então 18 quadrados (6 + 12 = 18) e mais 8 triângulos equiláteros (já que são 8
+vértices). Ficando um total de 26 faces.
 			</p>
             <hr class=" my-4">
 			<p class="text mb-4">
