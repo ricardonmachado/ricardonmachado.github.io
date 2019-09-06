@@ -183,7 +183,7 @@ img::-moz-selection {
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 56px);
-  background-image: url("../img/nova.jpg");
+  background-image: url("../img/capa_site.jpg");
   background-position: center center;
   background-size: cover;
 }
