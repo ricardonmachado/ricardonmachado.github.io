@@ -92,7 +92,8 @@ style="background-color: #1444f7"
             <a class="btn btn-light btn-xl js-scroll-trigger" href="#macos">
             macOS</a>
 
-
+            <br><br><br>
+        <h2 class="section-heading text-white">Página em Construção</h2>
 
           </div>
         </div>
@@ -122,7 +123,7 @@ style="background-color: #1444f7"
       </div>
   </section>
 
-
+-->
 
 
 
@@ -130,20 +131,78 @@ style="background-color: #1444f7"
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
+
             <h2 class="section-heading ">Instalação no Linux</h2>
             
             <hr class="my-4">
-            <p class=" mb-4">Disponibilizamos a errata bla bla bla. Se você encontrou algum erro no livro, verifique se ele já está na errata, caso contrário por favor, nos informe.</p>
-      <a class="btn btn-primary btn-xl js-scroll-trigger" href="#contact">Comunicar erro</a>
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="">Baixar Errata</a>
+
+            <p class=" mb-1">O SageMath está diponível para Linux nas arquiteturas: 32bit, 64bit, arm, itanium e sparc. Vamos focar em 64bit e nas distribuições Debian e Ubuntu.</p>
+          
+            <p class=" mb-4">Existem basicamente três formas principais para instalar o Sage nessas distribuições. </p>
+
+            <div class="list-group">
+              <a class="nav-link js-scroll-trigger" href="#loja_linux" class="list-group-item">Pela Loja de aplicativos</a>
+              <a class="nav-link js-scroll-trigger" href="#terminal_linux" class="list-group-item">Pelo terminal, usando apt-get install</a>
+              <a class="nav-link js-scroll-trigger" href="#site_linux" class="list-group-item">Baixando diretamente do site do Sage</a>
+            </div>
+
+            <br>
             
+            <hr class="my-4" id="loja_linux">
+            <p   >
+            <h2 class="section-heading ">Instalação pela Loja</h2>
+            </p>
+            <a  >
+              O Sage está disponível na loja do Ubuntu, mas ainda não está disponível na loja do Debian. 
+            </a>
+            <p class=" mb-1">Este guia está em construção:</p>
+            <br><br><br>
+            <hr class="my-4" id="terminal_linux">
+            <p  >
+            <h2 class="section-heading ">Instalação pelo terminal</h2>
+            </p>
+
+            <p>
+            A instalação do Sage pelo terminal é semelhante em ampas as distribuições.
+            Será necessário a senha de superusuário ou senha root. Nas instruções, de terminal linux, a seguir, quando for dito para executar um comando: ($ comando), basta digitar o que aparece depois do $. Se tiver #, no lugar de $, significa que o terminal já está com permissão root. 
+            </p>
+            <hr class="my-4">
+            
+            <p class=" mb-1">No <strong>Ubuntu</strong>, abra o terminal e execute: </p>
+            <p class=" mb-1">$ sudo apt-get install sagemath </p>
+            <p class=" mb-4">Digite a senha do superusuário. Após o procedimento, o Sage deve estar instalado.</p>
+
+            <hr class="my-4">
+            <p class=" mb-1">No <strong>Debian</strong>, abra o terminal e execute: </p>
+            <p class=" mb-1">$ su </p>
+            <p class=" mb-1">Digite a senha do root, em seguida execute:</p>
+            <p class=" mb-1"># apt-get install sagemath</p>
+            <p class=" mb-1">Pressione <em>enter</em> e espere a instalação.</p>
+
+            <hr class="my-4">
+            <p class=" mb-1"><strong>Observação:</strong> Após a instalação, o Sage pode ser executado diretamente do terminal. Para isso, basta abrir o terminal e executar: </p>
+            <p class=" mb-1">$ sage </p>
+            <p class=" mb-1">O sage abrirá no terminal. Para que o sage fique disponível no <strong>Notebook</strong>, basta executar no terminal com o Sage aberto: </p>
+            <p class=" mb-1">sage: notebook()</p>
+
+            <p class=" mb-1">Para abrir o sage com a interface gráfica <strong>Jupyter</strong>, abra o terminal e execute o comando:</p>
+            <p class=" mb-1">$ sage -n jupyter</p>
+
+
+            <br><br><br>
+            <hr class="my-4" id="site_linux">
+            <p  >
+            <h2 class="section-heading ">Baixando pelo Site</h2>
+            </p>
+            <p class=" mb-1">Este guia está em construção:</p>
+
           </div>
         </div>
       </div>
   </section>
 
 
-
+<!--
 
     <section class="bg-azul_escuro" id="macos">
       <div class="container">
