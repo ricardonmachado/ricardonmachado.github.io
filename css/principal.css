@@ -24,6 +24,15 @@ hr.light {
   border-color: #fff;
 }
 
+
+hr.double {
+  max-width: 100px;
+}
+
+hr.triple {
+  max-width: 150px;
+}
+
 a {
   color: #1444f7;
   -webkit-transition: all 0.2s;
@@ -195,6 +204,8 @@ header.masthead hr {
   margin-bottom: 30px;
 }
 
+
+
 header.masthead h1 {
   font-size: 2rem;
 }
@@ -314,8 +325,6 @@ header.masthead p {
 
 .btn-xl {
   padding: 1rem 2rem;
-
-
 
 }
 
