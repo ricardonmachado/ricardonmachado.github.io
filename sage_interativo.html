@@ -1,0 +1,308 @@
+﻿<!DOCTYPE html>
+<html lang="pt">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SageMathCell</title>
+    <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+    <script>$(function () {
+    // Make the div with id 'mycell' a Sage cell
+    //sagecell.makeSagecell({inputLocation:  '#mycell',
+    //                       template:       sagecell.templates.minimal,
+    //                       evalButtonText: 'Activate'});
+    // Make *any* div with class 'compute' a Sage cell
+    sagecell.makeSagecell({inputLocation: 'div.compute',
+                           evalButtonText: 'Evaluate'});
+    });
+    </script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/principal.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation 
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #1444f7" id="mainNav">
+
+style="background-color: #1444f7"
+
+    -->
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top"  id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="index.html">Home</a>
+        
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#page-top">Início</a>
+            </li>            
+
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#sagecell">Soma de Riemann</a>
+            </li>
+
+            
+
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#autores">Autores</a>
+            </li>            
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+
+  
+   <header class="masthead bg-primary text-center  d-flex">
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <!--<h1 >
+              <strong>Em Breve skauhdfisfuh sof</strong>
+            </h1> -->
+            
+          </div>
+          <div class="col-lg-8 mx-auto">
+          		
+            <h2 class=" text-white mb-5 ">Na seção <em>Soma de Riemann</em> clique em Evaluate para ativar as funções interativas.</h2>
+
+        <div class="row justify-content-md-center">
+
+		    <div class="col-lg-12">
+          <a class="portfolio-box js-scroll-trigger" href="#sagecell">
+            <img class="img-fluid" src="img/interativo.png" alt="">
+            <div class="portfolio-box-caption">
+              
+            </div>
+          </a>
+        </div>
+    	</div>
+
+
+        	<!--
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Informações</a>-->
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+
+
+
+<section  id="sagecell">
+    
+<div class="container my-auto " >
+
+      <div class="row">
+        
+        <div class="col-lg-12 mx-auto">
+          <h1 style="color:#1444f7; font-size:30px;">Clique em “Evaluate” para ativar o código interativo da Soma de Riemann</h1>
+        </div>
+            <p class="text-faded mb-4"></p>
+
+        </div>
+        <div class="compute"> 
+        <script type="text/x-sage">@interact
+def _soma_riemann(f=sin(x), a=0, b=2*pi, n=(25,(1,50,1)), auto_update=True, direita = True, esquerda = False):
+    ''' 
+    Entradas:
+    f - expressão algébrica
+    a - ponto inicial do intervalo
+    b - ponto final do intervalo
+    n - numero de subintervalos da partição
+    saída: Gráfico de f com os retângulos da soma de Riemann
+    '''
+    G = Graphics()
+    n_passos = n
+    passo = 0
+    pmi = 0
+    area =0
+    variacao = (b-a)/n
+    for i in range(n_passos):
+        
+        inicio = a + passo
+        fim = a + passo + variacao
+        if direita == True:
+            pmi = f(x=inicio) #(f(x=inicio) + f(x=fim))/2
+        if esquerda == True:
+            pmi = f(x=fim)
+        else: 
+            pmi == f(x=inicio)
+            
+            
+        area=area+pmi*variacao
+        int_do_passo = [inicio, fim]
+         
+        G = G + plot(pmi, inicio, fim , fill='axis') + line([(fim,0), (fim, pmi)]) + line([(inicio,0), (inicio, pmi)])
+        passo = passo+variacao
+    
+    G = G + plot(f, a, b)
+    return G.show(figsize=[4,4], title = ' area = ' + str(float(area)))</script> 
+        </div>  
+
+    </div>
+
+
+        </div>
+      </div>
+</section>
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Page Features -->
+<section class="bg-primary" id="autores">
+   
+   <div class="container text-center">
+   	<h2 class="section-heading">Autores:<br> </h2>
+   	<hr class="my-4">
+   <div class="row">
+
+
+
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a ><img class="card-img-top" src="img/portfolio/fullsize/leon.jpg" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="http://www.dm.ufrpe.br/prof/leon" target="_blank">Leon Silva</a>
+                </h4>
+                <!--<h5>$24.99</h5> -->
+                <p class="card-text">Leon Silva, natural de Recife-PE, graduou-se em Matemática na UFRPE. É Mestre em Matemática pela UFC e Doutorando em Ciência da Computação pela UFPE. Desde 2011 é professor do Departamento de Matemática da Universidade Federal Rural de Pernambuco. Sua área de pesquisa é Matemática Aplicada e Computacional.</p>
+              </div>
+              <!--
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+              </div> -->
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a ><img class="card-img-top" src="img/portfolio/fullsize/marcelo.jpg" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="http://www.dm.ufrpe.br/prof/marcelo" target="_blank">Marcelo Santos</a>
+                </h4>
+                
+                <p class="card-text">Marcelo Santos, natural de Garanhuns-PE, graduou-se em Matemática na UPE. Obteve mestrado e doutorado em Matemática pela UFPE. Foi professor da UFRN. Atualmente é professor do Departamento de Matemática da Universidade Federal Rural de Pernambuco. Sua área de pesquisa é Mecânica Celeste.</p>
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a ><img class="card-img-top" src="img/portfolio/fullsize/ricardo.jpg" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="https://sites.google.com/site/ricardonunesmachadojr/" target="_blank">Ricardo Machado</a>
+                </h4>
+                
+                <p class="card-text">Ricardo Machado, natural de Timbaúba-PE, é Bacharel, Mestre e Doutor em Matemática pela UFPE, onde foi professor por cinco anos. Desde 2015 é professor do Departamento de Matemática da Universidade Federal Rural de Pernambuco. Sua área de pesquisa é Topologia Combinatória.</p>
+              </div>
+              
+            </div>
+          </div>
+
+</div>
+        </div>
+        </section>
+    <!-- /.row -->
+
+
+	<!--  Tela 7 - contato (início)  -->
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading">Entre em contato com os autores</h2>
+            
+            <!--
+            <hr class="my-4">
+            
+            <p class="mb-5">Escrever um texto</p> <br>
+			-->
+            <i class="fas fa-envelope fa-3x mb-3 sr-contact-2"></i>
+            <p>
+              <a href="mailto:sagectu@gmail.com">sagectu@gmail.com</a>
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!--  Tela 7 - contato (fim)  -->
+
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+
+    <!-- Custom scripts for this template -->
+    <script src="js/creative.min.js"></script>
+
+
+
+
+  </body>
+
+</html>
