@@ -131,7 +131,7 @@ style="background-color: #1444f7"
         </div>
         <div class="compute"> 
         <script type="text/x-sage">@interact
-def _soma_riemann(f=sin(x), a=0, b=2*pi, n=(25,(1,50,1)), auto_update=True, direita = True, esquerda = False):
+def _soma_riemann(f=sin(x), a=0, b=2*pi, n=(15,(1,50,1)), auto_update=True, percet_intervalo=(0.5, (0, 1, 0.1))):
     ''' 
     Entradas:
     f - expressão algébrica
@@ -147,21 +147,14 @@ def _soma_riemann(f=sin(x), a=0, b=2*pi, n=(25,(1,50,1)), auto_update=True, dire
     area =0
     variacao = (b-a)/n
     for i in range(n_passos):
-        
         inicio = a + passo
         fim = a + passo + variacao
-        if direita == True:
-            pmi = f(x=inicio) #(f(x=inicio) + f(x=fim))/2
-        if esquerda == True:
-            pmi = f(x=fim)
-        else: 
-            pmi == f(x=inicio)
-            
-            
+        pmi = f(x=inicio+percet_intervalo*(fim-inicio)) #(f(x=inicio) + f(x=fim))/2
+        
         area=area+pmi*variacao
         int_do_passo = [inicio, fim]
          
-        G = G + plot(pmi, inicio, fim , fill='axis') + line([(fim,0), (fim, pmi)]) + line([(inicio,0), (inicio, pmi)])
+        G = G + plot(pmi, inicio, fim , fill='axis', color='gray') + line([(fim,0), (fim, pmi)], color='gray') + line([(inicio,0), (inicio, pmi)], color='gray')
         passo = passo+variacao
     
     G = G + plot(f, a, b)
