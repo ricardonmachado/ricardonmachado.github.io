@@ -1,0 +1,152 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{indentfirst}
+\usepackage{amssymb,amsmath,amsthm,amsfonts,amscd}	%s�mbolos e caracteres especiais
+\usepackage{empheq}
+\usepackage{latexsym}
+
+\usepackage{graphicx,graphics,epsfig}								%para inserir figuras
+\usepackage{graphpap}										%pictures
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage[brazil]{babel}
+
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage[normalem]{ulem}
+\usepackage[a4paper,top=20mm,bottom=20mm,left=20mm,right=20mm]{geometry}
+\usepackage{textcomp}
+\usepackage{amsthm}
+\usepackage[normalem]{ulem}
+\usepackage{multicol}
+
+
+\newtheorem{q}{}
+
+
+\usepackage{array}
+
+
+
+
+\begin{document}
+\pagenumbering{arabic}
+\thispagestyle{empty}
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+ATUALIZAÇÃOES 
+\end{center}
+
+\noindent
+Silva, L., Santos, M., Machado, R. \textit{Elementos de Computação Matemática com SageMath}. SBM. Rio de Janeiro. 2019.
+
+
+% folha, linha, onde se lê, leia-se
+
+\vspace{1cm}
+
+
+Na versão 9.0 do SageMath foi feita uma grande atualização. O python 2 foi substituído pelo python 3. O python 2 ainda era utilizado em muito softwares, mas os desenvolvedores descidiram parar de atualizar esta versão para ajudar os desenvolvedores do python 3. Assim em 2020 o python 2 perdeu o suporte e todos os softwares que usam python precisaram se adaptar ao python 3.
+
+A lógica da linguagem continua a mesma, mas em alguns casos, um pouco de modificação na sintaxe será necessária para que os códigos funcionem na versão 3 ou seja, no SageMath 9.0 em diante.
+
+Essa modificação, apesar de proporcionar o desconforto da adaptação, visa um aprimoramento no desempenho e otimização de memória. 
+
+Vamos listar todos os comandos incluídos no livro que sofreram alguma alteração, mesmo que não tenha deixado de funcionar.
+
+\begin{itemize}
+ \item [i.] O \verb|print| agora é um método. Então, onde antes se escrevia: 
+ \begin{verbatim}
+ sage: print 'Um elefante'
+  'Um elefante'
+ \end{verbatim}
+Agora se escreve:
+ \begin{verbatim}
+ sage: print('Um elefante')
+  'Um elefante'
+ \end{verbatim}
+ 
+ \item [ii.] \verb|range|
+ 
+ O método \verb|range| continua funcionando da mesma forma nos códigos. O que mudou foi que o software agora não cria uma lista inteira, fazendo com que se gaste menos memória ram. Mas a visualização mudou.
+ Então, antes tinhamos:
+ \begin{verbatim}
+sage: range(5)
+ [0, 1, 2, 3, 4]
+ \end{verbatim}
+Agora:
+ \begin{verbatim}
+sage: range(5)
+ range(0, 5)
+ \end{verbatim}
+ Então, se quisermos ver a lista do \verb|range(5)|, fazemos o segunite.
+ \begin{verbatim}
+sage: list(range(5))
+ [0, 1, 2, 3, 4]
+\end{verbatim}
+Mas quando o \verb|range| aparece no código, por exemplo, em um \verb|for|, nada muda, só que agora está mais otimizado, gastando menos memória ram.
+
+\item [iii.] O \verb|raw_input| foi substituído por \verb|input|
+\end{itemize}
+
+
+\vspace{1cm}
+
+Na tabela abaixo listamos a primeira ocorrência em que os métodos, que sofreram alguma alteração, aparecem no texto, mostrando como era antes e como ficou a partir do SageMath 9.0.
+
+\centering
+\setlength{\extrarowheight}{1.5pt}
+\begin{tabular}{|c|c|c|c|}
+\hline
+ ~~ Folha ~~ & ~~ Linha ~~ & ~~~~~~~~~~~~ Onde se escreve ~~~~~~~~~~~~ & ~~~~~~~~~~~~ escreva ~~~~~~~~~~~~ \\
+\hline \hline
+ 67 & 1 & \verb|print text1|  & \verb|print(text1)| \\ \hline
+ 72 & 4 & \verb|range(10)| &  \verb|list(range(10))|$^\star$ \\ \hline
+ 108 &  16 & \verb|raw_input| & \verb|input| \\ \hline
+\end{tabular}
+
+
+$*$ não confundir a visualização com a utilização do método. 
+% 
+% {
+% \setlength{\extrarowheight}{1.5pt}
+% \begin{tabular}{|c|c|c|}
+% \hline
+% a & Row 1 & classe $C^2$ \\ \hline
+% b & Row 2 & fdgtd\\ \hline
+% 
+% \end{tabular}
+% }
+
+
+% 
+% \centering
+% 
+% \begin{tabular}{l l l }
+% \toprule
+% \textbf{Operação} & \textbf{Sintaxe} & \textbf{Exemplo}  \\
+% \midrule
+% $\displaystyle\lim\limits_{x\to a}f(x)$ &  \verb|limit(f, x=a)|\index[metodo]{{\tt limit}} &   \ref{example1}  \\
+% 
+% $\displaystyle\lim\limits_{x\to +\infty}f(x)$ &\verb|limit(f, x=+infinity)| &   \ref{example6} \\
+% 
+% $\displaystyle\lim_{x\to -\infty}f(x)$ & \verb|limit(f, x=-infinity)| &   \ref{example6}\\
+% 
+% $\displaystyle\lim_{x\to a^+}f(x)$ & \verb|limit(f, x=a, dir='+')| &   \ref{example7}\\
+% $\displaystyle\lim_{x\to a^-}f(x)$ & \verb|limit(f, x=a, dir='-')|  &   \ref{example8}\\
+% \bottomrule
+% \end{tabular}
+% \caption{Operações de limite de funções.}\label{limite_de_funções}
+% \end{table}
+
+
+\end{document}
