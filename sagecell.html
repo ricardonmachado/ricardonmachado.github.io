@@ -883,7 +883,8 @@ show(desolve(diff(y,x) + y - 1, y, ics=[10, 2]))</script>
       <th scope="row">Curva paramétrica:<br> $(t^2, t^3)$, em  $(-1, 1)$</th>
       	<td>
       	<div class="compute">  
-<script type="text/x-sage">parametric_plot([t^2, t^3], (t, -1, 1))</script>
+<script type="text/x-sage">var('t')
+parametric_plot([t^2, t^3], (t, -1, 1))</script>
         </td>
     </tr> 
 
