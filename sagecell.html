@@ -102,10 +102,11 @@ style="background-color: #1444f7"
 
 <section  id="sagecell">
     
-<div class="container my-auto">
+<div class="container my-auto ">
 
       <div class="row">
         
+
         <div class="col-lg-12 mx-auto">
           <h1 style="color:#1444f7; font-size:30px;">Digite seu cálculo do Sage abaixo e clique em “Evaluate”</h1>
         </div>
@@ -114,40 +115,155 @@ style="background-color: #1444f7"
         </div>
         <div class="compute"> 
           <script type="text/x-sage"></script>
-        </div>  
+        </div>  <br><br>
 
+
+<!-- Início colocar aqui um centralizador  -->
+
+
+<div class="col-md-9 mx-auto ">
+          <div class="card flex-md-row mb-4 box-shadow h-md-250">
+            <div class="card-body d-flex flex-column align-items-center">
+              <!--<strong class="d-inline-block mb-2 text-primary">World</strong>
+              <h3 class="mb-0">
+                <a class="text-dark" >Featured post</a>
+              </h3>
+              <div class="mb-1 text-muted">Nov 12</div>-->
+              <p class="card-text mb-auto">Nós, os autores do livro <a href="index.html" target="_blank">Elementos de Computação Matemática com SageMath</a>, preparamos esta página, organizada por tópicos, com vários exemplos que funcionam on-line.
+              </p><br>
+              <p class="card-text mb-auto">
+              	Para que nossos exemplos funcionem on-line, usamos o 
+<a href="https://sagecell.sagemath.org/" target="_blank">SageMathCell</a> e agradecemos a 
+<a href="https://cocalc.com/" target="_blank">SageMath, Inc..</a> por fornecer 
+ os recursos para os seus cálculos.
+
+
+               </p><br>
+              <!--<a href="index.html">Conheça o livro</a>-->
+
+<p class="card-text mb-auto"> Para dar sugestões ou relatar erros, entre em contato através do e-mail: sagectu@gmail.com </p>
+
+            </div>
+        
+<a class="portfolio-box js-scroll-trigger" href="index.html">          
+<img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]" style="width: 200px; height: 272px;" src="img/elementos_de_computacao_matematica_com_sagemath.jpg" data-holder-rendered="true">
+
+<div class="portfolio-box-caption">
+		<p class=" mb-4">
+            Clique para conhecer o livro.
+            </p>
+		</div>
+</a>
+
+
+
+
+
+</div>
+
+<!--
+<div class="btn-group-vertical" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-secondary">Álgebra Linear</button>
+  <button type="button" class="btn btn-secondary">Aritmética</button>
+  <button type="button" class="btn btn-secondary">Cálculo</button>
+  <button type="button" class="btn btn-secondary">EDO</button>
+  <button type="button" class="btn btn-secondary">Funções Matemáticas</button>
+  <button type="button" class="btn btn-secondary">Gráficos</button>
+  <button type="button" class="btn btn-secondary">Operações</button>
+</div>  
+-->
+
+<ul class="nav navbar-dark bg-primary justify-content-center">
+  
+  <li class="nav-item">
+    <a class="nav-link active js-scroll-trigger" href="#algebralinear">Álgebra Linear</a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">Aritmética</a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link active js-scroll-trigger" href="#calculo">Cálculo</a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">Contagem</a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link active js-scroll-trigger" href="#edo">EDO</a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link active js-scroll-trigger" href="#funcoes">Funções Matemáticas</a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link active js-scroll-trigger" href="#graficos">Gráficos</a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link active js-scroll-trigger" href="#operacoes">Operações</a>
+  </li>
+
+</ul>
+
+<!-- Fim colocar aqui um centralizador  -->
+
+          <!--  
+<a class="portfolio-box js-scroll-trigger" href="index.html">
+
+		<img class="img-fluid" src="img/elementos_de_computacao_matematica_com_sagemath.jpg" alt="">
+		
+		<div class="portfolio-box-caption">
+		<p class=" mb-4">
+            Clique para conhecer o livro.
+            </p>
+		</div>
+		
+		</a>-->
+
+            <!--<img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]" style="width: 200px; height: 272px;" src="img/elementos_de_computacao_matematica_com_sagemath.jpg" data-holder-rendered="true">-->
+   
+
+
+          </div>
     </div>
 
 
         </div>
       </div>
+
+
+
+
 </section>
 
 
 
 
 
+	
 
 
 
-
-   
-    <section class="bg-primary" id="algebralinear">
+   <section  id="algebralinear">
       <div class="container">
         <div class="row">
           <!--<div class="col-lg-8 mx-auto text-center"> -->
             <h2 class="section-heading text-black">Álgebra Linear</h2>
             <hr class="light my-4">
 
-<div class="table-responsive">            
+<div class="table-responsive" >            
 <table class="table">
   <thead class="thead-dark">
 
     <tr>
       <th scope="col">Operação Matemática</th>
-      <th scope="col">Sintaxe Sage</th>
+     
       <th scope="col">Exemplo</th>
-      <th scope="col">Resultado</th>
+      
     </tr>
   </thead>
   <tbody>
@@ -155,166 +271,184 @@ style="background-color: #1444f7"
 
     <tr>
       <th scope="row">$\overrightarrow{v} = (a, b, c)$</th>
-      <td>v = vector([a,b,c])</td>
-      <td>v = vector([1,-1,1]); v</td>
-      <td>(1,-1,1)</td>
+      
+      <td>
+      	
+		<div class="compute"> 
+          <script type="text/x-sage"> v = vector([1,-1,1]); v </script>
+
+      </td>
+      
     </tr>
 
     <tr>
       <th scope="row">$\overrightarrow{u} + \overrightarrow{v}$</th>
-      <td>u+v</td>
-      <td>v = vector([1,-1,1])<br>
-          u = vector([1,1,0])<br>
-		  u + v</td>
-      <td>(2,0,1)</td>
+      
+      <td>
+      	<div class="compute">  
+<script type="text/x-sage"> v = vector([1,-1,1])
+u = vector([1,1,0])
+u + v </script>
+      </td>
     </tr>    
 
-    <tr>
-      <th scope="row">$k\overrightarrow{v}$</th>
-      <td>k*v</td>
-      <td>v = vector([1,-1,1])<br>
-		  2*v</td>
-      <td>(2,-2,2)</td>
-    </tr>   
 
     <tr>
+      <th scope="row">$k\cdot\overrightarrow{v}$</th>
+	 	<td>
+      	<div class="compute">  
+<script type="text/x-sage"> v = vector([1,-1,1])
+2*v </script>
+        </td>
+    </tr>  
+
+    
+    <tr>
       <th scope="row">$\langle \overrightarrow{u}, \overrightarrow{v} \rangle$</th>
-      <td>u.dot_product(v)</td>
-      <td>v = vector([1,-1,1])<br>
-      	  u = vector([1,1,0])<br>
-		  u.dot_product(v)</td>
-      <td>0</td>
-    </tr>   
+	 	<td>
+      	<div class="compute">  
+<script type="text/x-sage"> v = vector([1,-1,1])
+u = vector([1,1,0])
+u.dot_product(v) </script>
+        </td>
+    </tr>       
+
 
     <tr>
       <th scope="row">$\overrightarrow{u}\times \overrightarrow{v}$</th>
-      <td>u.cross_product(v)</td>
-      <td>v = vector([1,-1,1])<br>
-      	  u = vector([1,1,0])<br>
-		  u.cross_product(v)</td>
-      <td>(1,-1,-2)</td>
-    </tr>      
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage"> v = vector([1,-1,1])
+u = vector([1,1,0])
+u.cross_product(v) </script>
+        </td>
+    </tr>    
+
+
 
     <tr>
       <th scope="row">$\|\overrightarrow{v}\|$</th>
-      <td>norm(v)</td>
-      <td>v = vector([1,-1,1])<br>
-		  norm(v)</td>
-      <td>sqrt(3)</td>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage"> v = vector([1,-1,1])
+norm(v) </script>
+        </td>
     </tr>  
+
 
     <tr>
       <th scope="row">$A = \left(\begin{array}{rr} a & b \\c & d \end{array}\right)$</th>
-      <td>matrix([[a,b],[c,d]])</td>
-      <td> A=matrix([[1,2],[1,0]])<br>
-           show(A)
-      </td>
-      <td>$\left(\begin{array}{rr} 1 & 2 \\1 & 0 \end{array}\right)$</td>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage"> A=matrix([[1,2],[1,0]])
+show(A) </script>
+        </td>
     </tr>
 
     <tr>
-      <th scope="row">Soma de matrizes: $A + B$</th>
-      <td>A+B</td>
-      <td> A=matrix([[1,2],[1,0]])<br>
-           B=matrix([[0,-1],[1,0]])<br>
-           show(A + B)
-      </td>
-      <td>$\left(\begin{array}{rr} 1 & 1 \\2 & 0 \end{array}\right)$</td>
+      <th scope="row">Soma de Matrizes: $A+B$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage"> A=matrix([[1,2],[1,0]])
+B=matrix([[0,-1],[1,0]])
+show(A + B) </script>
+        </td>
     </tr>
+
 
     <tr>
       <th scope="row">transposta de $A$</th>
-      <td>transpose(A)</td>
-      <td>A=matrix([[1,2,1],[1,0,1]])<br>
-		  show(transpose(A))
-      </td>
-      <td>$\left(\begin{array}{rr}
-           1 & 1 \\
-           2 & 0 \\
-           1 & 1
-           \end{array}\right)$</td>
+      
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage"> A=matrix([[1,2,1],[1,0,1]])
+show(transpose(A)) </script>
+        </td>
     </tr>
 
 
     <tr>
       <th scope="row">Determinante de $A$</th>
-      <td>det(A)<br>
-      	ou<br>
-      	A.det()
-      </td>
-      <td>A=matrix([[1,2],[1,0]])<br>
-          det(A)
-      </td>
-      <td>-2</td>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage"> A=matrix([[1,2],[1,0]])
+det(A) </script>
+        </td>
     </tr>
 
 
     <tr>
       <th scope="row">Inversa de $A$</th>
-      <td>A^(-1)<br>
-      	ou<br>
-      	A.inverse()
-      </td>
-      <td>A=matrix([[1,2],[1,0]])<br>
-          show(A^(-1))
-      </td>
-      <td>$\left(\begin{array}{rr}
-          0 & 1 \\
-          \frac{1}{2} & -\frac{1}{2}
-          \end{array}\right)$</td>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage"> A=matrix([[1,2],[1,0]])
+show(A^(-1))</script>
+        </td>
     </tr>
 
 
     <tr>
       <th scope="row">Traço de $A$</th>
-      <td>A.trace()</td>
-      <td>A=matrix([[1,2],[1,0]])<br>
-          A.trace()
-      </td>
-      <td>1</td>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage"> 	A=matrix([[1,2],[1,0]])
+A.trace()</script>
+        </td>
     </tr>
 
 
     <tr>
       <th scope="row">Sistema Linear $Av=b$</th>
-      <td>A.solve_right(b)</td>
-      <td> A=matrix([[1,2,6],[1,2,0],[1,-2,3]])<br>
-           b=vector( [1, -1, 1] )<br>
-           A.solve_right(b)
-      </td>
-      <td>( -1/2, -1/4, 1/3 )</td>
-    </tr>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage">A=matrix([[1,2,6],[1,2,0],[1,-2,3]])
+b=vector( [1, -1, 1] )
+A.solve_right(b)</script>
+        </td>
     <tr>
+
+
+	<tr>    	
       <th scope="row">Núcleo de $A$</th>
-      <td>kernel(A)</td>
-      <td>A=matrix([[1,2,3],[1,2,3],[1,2,3]])<br>
-          kernel(A)</td>
-      <td>(1,0,-1)<br>
-          (0,1,-1)</td>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage">A=matrix([[1,2,3],[1,2,3],[1,2,3]])
+kernel(A)</script>
+        </td>
     </tr>
-    
+
+
+
     <tr>
       <th scope="row">Polinômio caracteristico de $A$</th>
-      <td>A.charpoly()</td>
-      <td>A=matrix([[1,2,3],[1,2,3],[1,2,3]])<br>
-          A.charpoly()</td>
-      <td>x^3 - 6*x^2</td>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage">A=matrix([[1,2,3],[1,2,3],[1,2,3]])
+A.charpoly().factor()</script>
+        </td>
     </tr>
+
+
     <tr>
       <th scope="row">Autovalores de $A$</th>
-      <td>A.eigenvalues()</td>
-      <td>A=matrix([[1,2,3],[1,2,3],[1,2,3]])<br>
-          A.eigenvalues()</td>
-      <td>[6,0,0]</td>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage">A=matrix([[1,2,3],[1,2,3],[1,2,3]])
+A.eigenvalues()</script>
+        </td>
     </tr>
+
+
     <tr>
       <th scope="row">Autovetores de $A$</th>
-      <td>A.eigenvectors_right()</td>
-      <td>A=matrix([[1,2,3],[1,2,3],[1,2,3]])<br>
-          A.eigenvectors_right()</td>
-      <td>[(6,[(1,1,1)],1),(0,[(1,0,-1/3),(0,1,-2/3)],2)]</td>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage">A=matrix([[1,2,3],[1,2,3],[1,2,3]])
+show(A.eigenvectors_right())</script>
+        </td>
     </tr> 
-    
+
+
   </tbody>
 </table>
 </div>
@@ -326,6 +460,10 @@ style="background-color: #1444f7"
         </div>
       </div>
     </section>
+
+
+
+
 
 
 
@@ -348,118 +486,146 @@ style="background-color: #1444f7"
 
     <tr>
       <th scope="col">Operação Matemática</th>
-      <th scope="col">Sintaxe Sage</th>
+      
       <th scope="col">Exemplo</th>
-      <th scope="col">Resultado</th>
+      
     </tr>
   </thead>
   <tbody>
 
 
     <tr>
-      <th scope="row">$\displaystyle \lim_{x\rightarrow a} f(x)$</th>
-      <td>limit(f,x=a)</td>
-      <td> limit( x^2+ 2*x, x = 1)
-      </td>
-      <td>3</td>
-    </tr>
-
-    <tr>
-      <th scope="row">$\displaystyle \lim_{x\rightarrow a^-} f(x)$</th>
-      <td>limit(f,x=a, dir='-')</td>
-      <td>limit(abs(x)/x,x=0,dir='-')</td>
-      <td>-1</td>
-    </tr>    
-
-    <tr>
-      <th scope="row">$\displaystyle \lim_{x\rightarrow a^+} f(x)$</th>
-      <td>limit(f,x=a, dir='+')</td>
-      <td>limit(abs(x)/x,x=0,dir='+')</td>
-      <td>1</td>
-    </tr>   
-
-    <tr>
-      <th scope="row">$\displaystyle \lim_{x\rightarrow +\infty} f(x)$</th>
-      <td>limit(f,x=+oo)</td>
-      <td>limit(1/x,x=+oo)</td>
-      <td>0</td>
-    </tr>   
-
-    <tr>
-      <th scope="row">$\dfrac{df}{dx}$</th>
-      <td>diff(f,x)</td>
-      <td> diff(sqrt(x), x)
-      </td>
-      <td>1/2/sqrt(x)</td>
-    </tr>
-    
-    <tr>
-      <th scope="row">$\dfrac{d^nf}{dx^n}$</th>
-      <td>diff(f,x,n)</td>
-      <td>diff(sin(x), x, 3)</td>
-      <td>-cos(x)</td>
-    </tr>
-    
-    <tr>
-      <th scope="row">$\dfrac{\partial f}{\partial x}$</th>
-      <td>diff(f,x)</td>
-      <td>var('y')<br>
-          diff(x^2+y^2, x)</td>
-      <td>2*x</td>
-    </tr>
-    <tr>
-      <th scope="row">$\dfrac{\partial^2 f}{\partial y \partial y}$</th>
-      <td>diff(f,y,y)</td>
-      <td>var('y')<br>
-          diff(x^2+y^2, y, y)</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th scope="row">$\dfrac{\partial^2 f}{\partial x \partial y}$</th>
-      <td>diff(f,x,y)</td>
-      <td>var('y')<br>
-          diff(x^2+y^2, x, y)</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th scope="row">$\dfrac{\partial^2 f}{\partial y \partial x}$</th>
-      <td>diff(f,y,x)</td>
-      <td>var('y,z')<br>
-          diff(x^2+x*y^2+z^2,y,x)</td>
-      <td>2*y</td>
+      <th scope="row">$\displaystyle \lim_{x\rightarrow 1} x^2+2x$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage">limit( x^2+ 2*x, x = 1)</script>
+        </td>
     </tr> 
-    
-    <tr>
-      <th scope="row">$\displaystyle\int f(x)~dx$</th>
-      <td>integral(f,x)</td>
-      <td>integral(x^3, x)</td>
-      <td>x^4/4</td>
-    </tr>
+
 
     <tr>
-      <th scope="row">$\displaystyle\int_a^b f(x)~dx$</th>
-      <td>integral(f,x, a, b)</td>
-      <td>integral(sqrt(x),x,0,4)</td>
-      <td>16/3</td>
-    </tr>
+      <th scope="row">$\displaystyle \lim_{x\rightarrow 0^-} \frac{|x|}{x}$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage"> limit(abs(x)/x,x=0,dir='-') </script>
+        </td>
+    </tr> 
+
+    <tr>
+      <th scope="row">$\displaystyle \lim_{x\rightarrow 0^+} \frac{|x|}{x}$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage"> limit(abs(x)/x,x=0,dir='+') </script>
+        </td>
+    </tr> 
+
+    <tr>
+      <th scope="row">$\displaystyle \lim_{x\rightarrow +\infty} \frac{1}{x}$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage"> limit(1/x,x=+oo) </script>
+        </td>
+    </tr> 
+
+    <tr>
+      <th scope="row">$\dfrac{d}{dx}(\sqrt{x})$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage"> show(diff(sqrt(x), x)) </script>
+        </td>
+    </tr> 
+
+    <tr>
+      <th scope="row">$\dfrac{d^3}{dx^3}(\sin(x))$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage"> diff(sin(x), x, 3) </script>
+        </td>
+    </tr> 
+
+    <tr>
+      <th scope="row">$\dfrac{\partial}{\partial x}(x^2+y^2)$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage"> var('y')
+diff(x^2+y^2, x)</script>
+        </td>
+    </tr>    
+    
+    <tr>
+      <th scope="row">$\dfrac{\partial^2}{\partial y\partial y}(x^2+y^2)$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage"> var('y')
+diff(x^2+y^2, y, y)</script>
+        </td>
+    </tr>  
+
+    <tr>
+      <th scope="row">$\dfrac{\partial^2}{\partial x\partial y}(x^2+y^2)$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage"> var('y')
+diff(x^2+y^2, x, y)</script>
+        </td>
+    </tr>  
+
+    <tr>
+      <th scope="row">$\dfrac{\partial^2}{\partial x\partial y}(x^2+xy^2+z^2)$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage"> var('y, z')
+diff(x^2+x*y^2+z^2, y, x)</script>
+        </td>
+    </tr>  
+
+
+    <tr>
+      <th scope="row">$\displaystyle\int x^3~dx$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage"> integral(x^3, x)</script>
+        </td>
+    </tr>  
+    
+    <tr>
+      <th scope="row">$\displaystyle\int_0^4 \sqrt{x}~dx$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage"> integral(sqrt(x), x, 0, 4)</script>
+        </td>
+    </tr>  
+
 
     <tr>
       <th scope="row">$\displaystyle\int_a^b\int_c^d f(x,y)~dxdy$</th>
-      <td>var('y')<br>
-		  integral(integral(f,(x,a,b)),(y,c,d))</td>
-      <td>var('y')<br>
-          integral(integral(cos(y),(x,-1,5)),(y,pi/6,pi/2))</td>
-      <td>3</td>
-    </tr>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage"> integral(sqrt(x), x, 0, 4)</script>
+        </td>
+    </tr>  
 
     <tr>
-      <th scope="row">$\displaystyle\int_a^b\int_{g_1(x)}^{g_2(x)} f(x,y)~dxdy$</th>
-      <td>var('y')<br>
-		  integral(integral(f,(x,a,b)),(y,g1,g2))</td>
-      <td>var('y')<br>
-          integral(integral(x-y,(y,2*x,2)),(x,0,1))</td>
-      <td>-1</td>
-    </tr>    
+      <th scope="row">$\displaystyle\int_{\frac{\pi}{6}}^{\frac{\pi}{2}}\int_{-1}^5 \cos(y)~dxdy$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage"> var('y')
+integral(integral(cos(y),(x,-1,5)),(y,pi/6,pi/2))</script>
+        </td>
+    </tr>  
+
+
+    <tr>
+      <th scope="row">$\displaystyle\int_0^1\int_{2x}^{2} x-y~dydx$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage"> var('y')
+integral(integral(x-y,(y,2*x,2)),(x,0,1))</script>
+        </td>
+    </tr> 
+
+
+     
 
   </tbody>
 </table>
@@ -471,7 +637,7 @@ style="background-color: #1444f7"
 
 
 
-    <section class="bg-primary" id="edo">
+    <section  id="edo">
       <div class="container">
         <div class="row">
           <!--<div class="col-lg-8 mx-auto text-center"> -->
@@ -484,45 +650,44 @@ style="background-color: #1444f7"
 
     <tr>
       <th scope="col">Operação Matemática</th>
-      <th scope="col">Sintaxe Sage</th>
+      
       <th scope="col">Exemplo</th>
-      <th scope="col">Resultado</th>
+      
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">EDO de $1^a$ Ordem <br>
-                      $y'(x) + py(x) = q$
-      </th>
-      <td>desolve(edo, y)</td>
-      <td> y = function( 'y' )( x ) <br>
-            show(desolve(diff(y,x)+y-1,y)) 
-      </td>
-      <td>$(C+e^x)e^{(-x)}$</td>
-    </tr>
-    <tr>
-      <th scope="row">EDO de $2^a$ Ordem <br>
-                      $y''(x) + py'(x) + ky(x) = q(x)$
-      </th>
-      <td>desolve(edo, y)</td>
-      <td> y = function( 'y' )( x ) <br>
-          show(desolve(diff( y, x, 2) - y == x  , y ))
-      </td>
-      <td>$K_2e^{(-x)}+K_1e^x -x$</td>
-    </tr>    
 
-        <tr>
-      <th scope="row">Problema de Valor Inicial <br>
-                      $y'(x) + py(x) = q$ <br>
-                      $y(x_0) = y_0$
 
-      </th>
-      <td>desolve(edo,y,ics=[x_0,y_0])  </td>
-      <td>  y=function('y')(x)<br>
-            desolve(diff(y,x) + y-1,y,ics=[10,2])
-      </td>
-      <td>$(e^{10}+e^x)e^{(-x)}$</td>
-    </tr>    
+    <tr>
+      <th scope="row">$y'(x) + y(x) = 1$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage"> y = function( 'y' )( x ) 
+show(desolve(diff(y,x) + y - 1, y))</script>
+        </td>
+    </tr> 
+
+
+    <tr>
+      <th scope="row">$y''(x) -y(x) = x$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage"> y = function( 'y' )( x ) 
+show(desolve(diff(y,x,2) - y == x,y))</script>
+        </td>
+    </tr> 
+
+    <tr>
+      <th scope="row">$y'(x) + y(x) = 1$,$~~$ $y(10) = 2$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage"> y = function( 'y' )( x ) 
+show(desolve(diff(y,x) + y - 1, y, ics=[10, 2]))</script>
+        </td>
+    </tr> 
+ 
+
+  
     
     
   </tbody>
@@ -553,64 +718,85 @@ style="background-color: #1444f7"
 
     <tr>
       <th scope="col">Operação Matemática</th>
-      <th scope="col">Sintaxe Sage</th>
+      
       <th scope="col">Exemplo</th>
-      <th scope="col">Resultado</th>
+      
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">Valor absoluto de $x$</th>
-      <td>abs(x)</td>
-      <td> abs(-2)
-      </td>
-      <td>2</td>
-    </tr>
+
 
     <tr>
-      <th scope="row">Raiz quadrada de $x$</th>
-      <td>sqrt(x)</td>
-      <td> sqrt(225)
-      </td>
-      <td>15</td>
-    </tr>
+      <th scope="row">$|-2|$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage">abs(-2)</script>
+        </td>
+    </tr> 
 
     <tr>
-      <th scope="row">Raiz $n$-ésima de $x$</th>
-      <td>x**(1/n) ou x^(1/n)</td>
-      <td> 8^(1/3)
-      </td>
-      <td>2</td>
-    </tr>
+      <th scope="row">$\sqrt{225}$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage">sqrt(225)</script>
+        </td>
+    </tr> 
 
     <tr>
-      <th scope="row">Exponencial na Base $e$</th>
-      <td>exp(x)</td>
-      <td> exp(2)</td>
-      <td>e^2</td>
-    </tr>
+      <th scope="row">$\sqrt[3]{8}$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage">8^(1/3)</script>
+        </td>
+    </tr> 
 
     <tr>
-      <th scope="row">Logaritmo de $x$ na base $b$</th>
-      <td>log(x,b)</td>
-      <td> log(1024, 2)
-      </td>
-      <td>10</td>
-    </tr>
+      <th scope="row">$e^2$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage">exp(2)</script>
+        </td>
+    </tr> 
+
 
     <tr>
-      <th scope="row">Seno de $x$</th>
-      <td>sin(x)</td>
-      <td>sin(pi)</td>
-      <td>1</td>
-    </tr>    
+      <th scope="row">$\log_2(1024)$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage">log(1024, 2)</script>
+        </td>
+    </tr> 
+
 
     <tr>
-      <th scope="row">Cosseno de $x$</th>
-      <td>cos(x)</td>
-      <td>cos(pi/2)</td>
-      <td>0</td>
-    </tr>  
+      <th scope="row">$\sin(\pi)$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage">sin(pi)</script>
+        </td>
+    </tr> 
+
+
+    <tr>
+      <th scope="row">$\cos(\frac{\pi}{2})$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage">cos(pi/2)</script>
+        </td>
+    </tr> 
+
+    <tr>
+      <th scope="row">$\tan(\frac{3\pi}{4})$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage">tan(3*pi/4)</script>
+        </td>
+    </tr> 
+
+<!--
+ 
+
+
 
     <tr>
       <th scope="row">Tangente de $x$</th>
@@ -618,21 +804,28 @@ style="background-color: #1444f7"
       <td>tan(3*pi/4)</td>
       <td>-1</td>
     </tr>      
+    -->
     
     <tr>
-      <th scope="row">Coeficiente Binomial de $n$ sobre $r$</th>
-      <td>binomial(n,r)</td>
-      <td>binomial(5,2)</td>
-      <td>10</td>
-    </tr>   
+      <th scope="row">$\displaystyle{{5}\choose{2}}$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage">binomial(5,2)</script>
+        </td>
+    </tr> 
+ 
+
 
     <tr>
-      <th scope="row">Fatorial de $n$</th>
-      <td>factorial(n)</td>
-      <td>factorial(5)</td>
-      <td>120</td>
-    </tr>      
+      <th scope="row">$5!$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage">factorial(5)</script>
+        </td>
+    </tr> 
 
+   
+<!--
     <tr>
       <th scope="row">Fatoração em primos</th>
       <td>factor(n)</td>
@@ -646,7 +839,7 @@ style="background-color: #1444f7"
       <td>gcd(12, 16)</td>
       <td>4</td>
     </tr>      
-
+-->
 	</tbody>
 	</table>
 	</div>
@@ -657,7 +850,7 @@ style="background-color: #1444f7"
 
 
 
-    <section class="bg-primary" id="graficos">
+    <section id="graficos">
       <div class="container">
         <div class="row">
           <!--<div class="col-lg-8 mx-auto text-center"> -->
@@ -669,39 +862,52 @@ style="background-color: #1444f7"
   <thead class="thead-dark">
 
     <tr>
-      <th scope="col">Operação Matemática</th>
-      <th scope="col">Sintaxe Sage</th>
+      <th scope="col">Gráfico/Curva</th>
+      
       <th scope="col">Exemplo</th>
       
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">Função $f$</th>
-      <td>plot(f, (x, a, b))</td>
-      <td> plot(x^2, (x, -1, 1))</td>
-    </tr>
 
     <tr>
-      <th scope="row">Curva Paramétrica</th>
-      <td>parametric_plot( [ x( t ) , y( t ) ], ( t, a, b ) )</td>
-      <td> var( 't' )<br>
-           parametric_plot( [ t^2, t^3 ], ( t, -1 , 1 ) )</td>
-    </tr>
+      <th scope="row">Gráfico de: <br>$x^2$, em $[-1, 1]$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage">plot(x^2, (x, -1, 1))</script>
+        </td>
+    </tr> 
+
 
     <tr>
-      <th scope="row">Curva Implícita C</th>
-      <td>  implicit_plot( C, (x, a, b), (y, c, d ) )</td>
-      <td>  var( 'y' )<br>
-            implicit_plot( x^3+y^3 == 3*x*y, ( x, -3, 2 ), ( y, -3, 2 ) )</td>
-    </tr>
+      <th scope="row">Curva paramétrica:<br> $(t^2, t^3)$, em  $(-1, 1)$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage">parametric_plot([t^2, t^3], (t, -1, 1))</script>
+        </td>
+    </tr> 
+
 
     <tr>
-      <th scope="row">Curva em coordenadas Polares</th>
-      <td>polar_plot( r(theta), ( theta, a, b ) )</td>
-      <td> var( 'theta' )<br>
-           polar_plot( theta/2*pi, ( theta, 0, 2*pi ) )</td>
-    </tr>    
+      <th scope="row">Curva implícita:<br>  $x^3+y^3 = 3xy$, com  $x\in (-3, 2)$ e $y\in (-3, 2)$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage">var( 'y' )
+implicit_plot(x^3+y^3 == 3*x*y, (x, -3, 2), (y, -3, 2))</script>
+        </td>
+    </tr> 
+
+
+    <tr>
+      <th scope="row">Curva polar:<br> $\theta/2\pi$, com  $\theta\in (0, 2\pi)$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage">var('theta')
+polar_plot(theta/2*pi, (theta, 0, 2*pi))</script>
+        </td>
+    </tr> 
+
+ 
   
     
     
@@ -726,39 +932,55 @@ style="background-color: #1444f7"
 
     <tr>
       <th scope="col">Operação Matemática</th>
-      <th scope="col">Sintaxe Sage</th>
+      
       <th scope="col">Exemplo</th>
       
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">Função $f$</th>
-      <td>plot3d(f,(x,a,b),(y,c,d))</td>
-      <td>var('y')<br>
-		  plot3d(x^2-y^2,(x,-1,1),(y,-1,1))</td>
-    </tr>
+
 
     <tr>
-      <th scope="row">Superfície Paramétrica</th>
-      <td>parametric_plot3d([x(u,v),y(u,v),z(u,v)],(u,a,b),(v,c,d))</td>
-      <td>var('u,v')<br>
-		  parametric_plot3d([u,u,u^2+v^2],(u,-1,1),(v,-1,1))</td>
-    </tr>
+      <th scope="row">Gráfico de: <br> $x^2-y^2$, com $x\in(-1, 1)$ e $y\in(-1, 1)$ </th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage">var('y')
+plot3d(x^2-y^2,(x,-1,1),(y,-1,1))</script>
+        </td>
+    </tr> 
+
 
     <tr>
-      <th scope="row">Curva Parametrizada</th>
-      <td>parametric_plot([x(t),y(t),z(t)],(t,a,b))</td>
-      <td>var('t')<br>
-	      parametric_plot3d([cos(t),sin(t),t],(t,0,2*pi))</td>
-    </tr>
+      <th scope="row">Superfície Paramétrica: <br> $(u,u,u^2+v^2)$, com $u\in (-1,1)$ e $v\in (v,-1,1)$ </th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage">var('u,v')
+parametric_plot3d([u,v,u^2+v^2],(u,-1,1),(v,-1,1))</script>
+        </td>
+    </tr> 
+
 
     <tr>
-      <th scope="row">Superfície definida por Equação</th>
-      <td>implicit_plot3d(f,(x,a,b),(y,c,d))</td>
-      <td>var('x, y, z')<br>
-          implicit_plot3d(x^2+y^2+z^2-4,(x,-2,2),(y,-2,2),(z,-2,2))</td>
-    </tr>    
+      <th scope="row">Curva Paramétrica: <br> $(\cos(t),\sin(t),t])$, com $t\in (0,2\pi)$  </th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage">var('t')
+parametric_plot3d([cos(t),sin(t),t],(t,0,2*pi))</script>
+        </td>
+    </tr> 
+
+
+    <tr>
+      <th scope="row">Superfície implícita: <br> $x^2+y^2+z^2=4$, com $x\in (-2, 2)$, $y\in (-2, 2)$ e $z\in (-2, 2)$ </th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage">var('x, y, z')
+implicit_plot3d(x^2+y^2+z^2-4,(x,-2,2),(y,-2,2),(z,-2,2))</script>
+        </td>
+    </tr> 
+
+
+ 
   
     
     
@@ -787,56 +1009,64 @@ style="background-color: #1444f7"
 
     <tr>
       <th scope="col">Operador</th>
-      <th scope="col">Funções Sage</th>
+      
       <th scope="col">Exemplo</th>
-      <th scope="col">Resultado</th>
+      
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">=</th>
-      <td>Atribuição</td>
-      <td> x=1; x
-      </td>
-      <td>1</td>
-    </tr>
 
     <tr>
-      <th scope="row">+</th>
-      <td>Adição</td>
-      <td>2+7</td>
-      <td>9</td>
-    </tr>
+      <th scope="row">Atribuição: x=1 </th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage">x=1; x</script>
+        </td>
+    </tr> 
 
     <tr>
-      <th scope="row">-</th>
-      <td>Subtração</td>
-      <td>14.5-0.5</td>
-      <td>14</td>
-    </tr>
+      <th scope="row">Soma: $2+7$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage">2+7</script>
+        </td>
+    </tr> 
+
 
     <tr>
-      <th scope="row">*</th>
-      <td>Multiplicação</td>
-      <td>3*9+1</td>
-      <td>28</td>
-    </tr>            
+      <th scope="row">Subtração: $14.5-0.5$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage">14.5-0.5</script>
+        </td>
+    </tr> 
 
     <tr>
-      <th scope="row">** ou ^</th>
-      <td>Potenciação</td>
-      <td> 2**5+2^2
-      </td>
-      <td>36</td>
-    </tr>
+      <th scope="row">Multiplicação: $3\times 9$ </th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage">3*9</script>
+        </td>
+    </tr> 
+
 
     <tr>
-      <th scope="row">/</th>
-      <td>Divisão</td>
-      <td>225/3</td>
-      <td>75</td>
-    </tr>    
-
+      <th scope="row">Potenciação: $2^5$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage">2^5</script>
+        </td>
+    </tr> 
+         
+    <tr>
+      <th scope="row">Divisão: $225/3$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage">225/3</script>
+        </td>
+    </tr> 
+ 
+<!--
     <tr>
       <th scope="row">//</th>
       <td>Quociente Inteiro</td>
@@ -851,42 +1081,50 @@ style="background-color: #1444f7"
       </td>
       <td>1</td>
     </tr>
+-->
 
     <tr>
-      <th scope="row">></th>
-      <td>Comparação (maior que) </td>
-      <td> 2>1
-      </td>
-      <td>True</td>
-    </tr>  
+      <th scope="row">Comparação: $2>1$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage">2>1</script>
+        </td>
+    </tr> 
 
     <tr>
-      <th scope="row"><</th>
-      <td>Comparação (menor que) </td>
-      <td>4< pi </td>
-      <td>False</td>
-    </tr>    
+      <th scope="row">Comparação: $4<2$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage">4 < 2</script>
+        </td>
+    </tr> 
+
 
     <tr>
-      <th scope="row">>=</th>
-      <td>Comparação (maior ou igual) </td>
-      <td>2+3>=5</td>
-      <td>True</td>
-    </tr>                  
+      <th scope="row">Comparação: $2+3\geq 5$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage">2+3>=5</script>
+        </td>
+    </tr> 
+
+    <tr>
+      <th scope="row">Comparação: $11\leq 2\times5$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage">11<=2*5</script>
+        </td>
+    </tr> 
     
     <tr>
-      <th scope="row"><=</th>
-      <td>Comparação (menor ou igual) </td>
-      <td>11<=2*5</td>
-      <td>False</td>
-    </tr>  
+      <th scope="row">Comparação: $21 \neq 3\times7$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage">21!=3*7</script>
+        </td>
+    </tr> 
 
-    <tr>
-      <th scope="row">!= </th>
-      <td>Comparação (diferente) </td>
-      <td>21 != 3*7</td>
-      <td>False</td>
-    </tr>  
+ 
 
   </tbody>
 </table>
