@@ -17,7 +17,7 @@
     //                       evalButtonText: 'Activate'});
     // Make *any* div with class 'compute' a Sage cell
     sagecell.makeSagecell({inputLocation: 'div.compute',
-                           evalButtonText: 'Evaluate'});
+                           evalButtonText: 'Calcular'});
     });
     </script>
 
@@ -117,7 +117,7 @@ style="background-color: #1444f7"
         
 
         <div class="col-lg-12 mx-auto">
-          <h1 style="color:#1444f7; font-size:30px;">Digite seu cálculo do Sage abaixo e clique em “Evaluate”</h1>
+          <h1 style="color:#1444f7; font-size:30px;">Digite seu cálculo do Sage abaixo e clique em “Calcular”</h1>
         </div>
             <p class="text-faded mb-4"></p>
 
@@ -696,13 +696,6 @@ diff(x^2+x*y^2+z^2, y, x)</script>
     </tr>  
 
 
-    <tr>
-      <th scope="row">$\displaystyle\int_a^b\int_c^d f(x,y)~dxdy$</th>
-      	<td>
-      	<div class="compute">  
-<script type="text/x-sage"> integral(sqrt(x), x, 0, 4)</script>
-        </td>
-    </tr>  
 
     <tr>
       <th scope="row">$\displaystyle\int_{\frac{\pi}{6}}^{\frac{\pi}{2}}\int_{-1}^5 \cos(y)~dxdy$</th>
