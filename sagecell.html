@@ -180,7 +180,7 @@ style="background-color: #1444f7"
   </li>
 
   <li class="nav-item">
-    <a class="nav-link disabled" href="#">Aritmética</a>
+    <a class="nav-link active js-scroll-trigger" href="#aritmetica">Aritmética</a>
   </li>
 
   <li class="nav-item">
@@ -188,7 +188,7 @@ style="background-color: #1444f7"
   </li>
 
   <li class="nav-item">
-    <a class="nav-link disabled" href="#">Contagem</a>
+    <a class="nav-link active js-scroll-trigger" href="#contagem">Contagem</a>
   </li>
 
   <li class="nav-item">
@@ -465,6 +465,96 @@ show(A.eigenvectors_right())</script>
 
 
 
+   <section  id="aritmetica">
+      <div class="container">
+        <div class="row">
+          <!--<div class="col-lg-8 mx-auto text-center"> -->
+            <h2 class="section-heading text-black">Aritmética</h2>
+            <hr class="light my-4">
+
+<div class="table-responsive" >            
+<table class="table">
+  <thead class="thead-dark">
+
+    <tr>
+      <th scope="col">Operação Matemática</th>
+     
+      <th scope="col">Exemplo</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+
+
+    <tr>
+      <th scope="row">Resto da divisão de $13$ por $7$</th>
+      <td>
+    <div class="compute"> 
+          <script type="text/x-sage">13%7</script>
+      </td>
+    </tr>
+
+
+    <tr>
+      <th scope="row">Quociente da divisão de $13$ por $7$</th>
+      <td>
+    <div class="compute"> 
+          <script type="text/x-sage">13//7</script>
+      </td>
+    </tr>    
+
+
+    <tr>
+      <th scope="row">mdc(10,15)</th>
+      <td>
+    <div class="compute"> 
+          <script type="text/x-sage">gcd(10, 15)</script>
+      </td>
+    </tr>    
+
+
+    <tr>
+      <th scope="row">mmc(10,15)</th>
+      <td>
+    <div class="compute"> 
+          <script type="text/x-sage">lcm(10, 15)</script>
+      </td>
+    </tr>   
+
+
+    <tr>
+      <th scope="row">Verifica se $53$ é primo</th>
+      <td>
+    <div class="compute"> 
+          <script type="text/x-sage">53.is_prime()</script>
+      </td>
+    </tr>   
+
+
+    <tr>
+      <th scope="row">Fatoração primária de 156</th>
+      <td>
+    <div class="compute"> 
+          <script type="text/x-sage">156.factor()</script>
+      </td>
+    </tr>  
+
+    <tr>
+      <th scope="row">Função de Euler: $\varphi(156)$</th>
+      <td>
+    <div class="compute"> 
+          <script type="text/x-sage">euler_phi(156)</script>
+      </td>
+    </tr>     
+
+
+  </tbody>
+</table>
+</div>
+
+        </div>
+      </div>
+    </section>
 
 
 
@@ -705,6 +795,94 @@ show(desolve(diff(y,x) + y - 1, y, ics=[10, 2]))</script>
 
 
 
+
+
+
+
+   <section  id="contagem">
+      <div class="container">
+        <div class="row">
+          <!--<div class="col-lg-8 mx-auto text-center"> -->
+            <h2 class="section-heading text-black">Contagem</h2>
+            <hr class="light my-4">
+
+<div class="table-responsive" >            
+<table class="table">
+  <thead class="thead-dark">
+
+    <tr>
+      <th scope="col">Operação Matemática</th>
+     
+      <th scope="col">Exemplo</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+
+
+
+
+    <tr>
+      <th scope="row">$\displaystyle{{5}\choose{2}}$</th>
+        <td>
+        <div class="compute">  
+<script type="text/x-sage">binomial(5,2)</script>
+        </td>
+    </tr> 
+ 
+
+
+    <tr>
+      <th scope="row">$5!$</th>
+        <td>
+        <div class="compute">  
+<script type="text/x-sage">factorial(5)</script>
+        </td>
+    </tr> 
+
+
+    <tr>
+      <th scope="row">Expansão de $(3x^2+1)^2(x-7)^3$</th>
+        <td>
+        <div class="compute">  
+<script type="text/x-sage">(((3*x^2+1)^2)*((x-7)^3)).expand()</script>
+        </td>
+    </tr> 
+
+
+    <tr>
+      <th scope="row">Permutação caótica de 5: $D_5$</th>
+        <td>
+        <div class="compute">  
+<script type="text/x-sage">def D_n(num):
+    t = (factorial(num)/e).n()
+    r = abs(floor(t)-t)
+    if r < 1/2:
+        return floor(t)
+    else:
+        return floor(t)+1
+D_n(5)</script>
+        </td>
+    </tr> 
+
+
+  </tbody>
+</table>
+</div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
     <section  id="funcoes">
       <div class="container">
         <div class="row">
@@ -806,23 +984,6 @@ show(desolve(diff(y,x) + y - 1, y, ics=[10, 2]))</script>
     </tr>      
     -->
     
-    <tr>
-      <th scope="row">$\displaystyle{{5}\choose{2}}$</th>
-      	<td>
-      	<div class="compute">  
-<script type="text/x-sage">binomial(5,2)</script>
-        </td>
-    </tr> 
- 
-
-
-    <tr>
-      <th scope="row">$5!$</th>
-      	<td>
-      	<div class="compute">  
-<script type="text/x-sage">factorial(5)</script>
-        </td>
-    </tr> 
 
    
 <!--
