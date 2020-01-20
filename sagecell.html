@@ -68,8 +68,17 @@ style="background-color: #1444f7"
             </li>
             
             <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#aritmetica">Aritmética</a>
+            </li>
+
+            <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#calculo">Cálculo</a>
             </li>
+
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contagem">Contagem</a>
+            </li>
+
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#edo">EDO</a>
             </li>
@@ -727,73 +736,6 @@ integral(integral(x-y,(y,2*x,2)),(x,0,1))</script>
 
 
 
-    <section  id="edo">
-      <div class="container">
-        <div class="row">
-          <!--<div class="col-lg-8 mx-auto text-center"> -->
-            <h2 class="section-heading text-black">EDO</h2>
-            <hr class="light my-4">
-
-<div class="table-responsive">            
-<table class="table">
-  <thead class="thead-dark">
-
-    <tr>
-      <th scope="col">Operação Matemática</th>
-      
-      <th scope="col">Exemplo</th>
-      
-    </tr>
-  </thead>
-  <tbody>
-
-
-    <tr>
-      <th scope="row">$y'(x) + y(x) = 1$</th>
-      	<td>
-      	<div class="compute">  
-<script type="text/x-sage"> y = function( 'y' )( x ) 
-show(desolve(diff(y,x) + y - 1, y))</script>
-        </td>
-    </tr> 
-
-
-    <tr>
-      <th scope="row">$y''(x) -y(x) = x$</th>
-      	<td>
-      	<div class="compute">  
-<script type="text/x-sage"> y = function( 'y' )( x ) 
-show(desolve(diff(y,x,2) - y == x,y))</script>
-        </td>
-    </tr> 
-
-    <tr>
-      <th scope="row">$y'(x) + y(x) = 1$,$~~$ $y(10) = 2$</th>
-      	<td>
-      	<div class="compute">  
-<script type="text/x-sage"> y = function( 'y' )( x ) 
-show(desolve(diff(y,x) + y - 1, y, ics=[10, 2]))</script>
-        </td>
-    </tr> 
- 
-
-  
-    
-    
-  </tbody>
-</table>
-</div>
-<!--
-            <p class="text-faded mb-4">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
--->
-            
-          <!--</div>-->
-        </div>
-      </div>
-    </section>
-
-
-
 
 
 
@@ -873,6 +815,84 @@ D_n(5)</script>
         </div>
       </div>
     </section>
+
+
+
+
+
+
+    <section  id="edo">
+      <div class="container">
+        <div class="row">
+          <!--<div class="col-lg-8 mx-auto text-center"> -->
+            <h2 class="section-heading text-black">EDO</h2>
+            <hr class="light my-4">
+
+<div class="table-responsive">            
+<table class="table">
+  <thead class="thead-dark">
+
+    <tr>
+      <th scope="col">Operação Matemática</th>
+      
+      <th scope="col">Exemplo</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+
+
+    <tr>
+      <th scope="row">$y'(x) + y(x) = 1$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage"> y = function( 'y' )( x ) 
+show(desolve(diff(y,x) + y - 1, y))</script>
+        </td>
+    </tr> 
+
+
+    <tr>
+      <th scope="row">$y''(x) -y(x) = x$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage"> y = function( 'y' )( x ) 
+show(desolve(diff(y,x,2) - y == x,y))</script>
+        </td>
+    </tr> 
+
+    <tr>
+      <th scope="row">$y'(x) + y(x) = 1$,$~~$ $y(10) = 2$</th>
+      	<td>
+      	<div class="compute">  
+<script type="text/x-sage"> y = function( 'y' )( x ) 
+show(desolve(diff(y,x) + y - 1, y, ics=[10, 2]))</script>
+        </td>
+    </tr> 
+ 
+
+  
+    
+    
+  </tbody>
+</table>
+</div>
+<!--
+            <p class="text-faded mb-4">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
+-->
+            
+          <!--</div>-->
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
 
 
 
