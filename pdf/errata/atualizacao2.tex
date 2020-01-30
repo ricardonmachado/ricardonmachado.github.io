@@ -1,0 +1,347 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{indentfirst}
+\usepackage{amssymb,amsmath,amsthm,amsfonts,amscd}	%s�mbolos e caracteres especiais
+\usepackage{empheq}
+\usepackage{latexsym}
+
+\usepackage{graphicx,graphics,epsfig}								%para inserir figuras
+\usepackage{graphpap}										%pictures
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage[brazil]{babel}
+
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage[normalem]{ulem}
+\usepackage[a4paper,top=20mm,bottom=20mm,left=20mm,right=20mm]{geometry}
+\usepackage{textcomp}
+\usepackage{amsthm}
+\usepackage[normalem]{ulem}
+\usepackage{multicol}
+
+
+\newtheorem{q}{}
+
+
+\usepackage{array}
+
+
+\usepackage{tcolorbox}% cria caixas para inserir texto
+\tcbset{boxrule=0.2mm,colback=white} % configuração da caixa tcolorbox
+\usepackage{verbatim}
+\usepackage{enumitem} % Customize lists
+%\usepackage{index}
+% \usepackage{splitidx}
+\usepackage{listings}
+\lstset{
+    escapeinside={(*}{*)}
+}
+%\usepackage[scale=0.85]{beramono}
+% \usepackage{imakeidx}
+%\usepackage[scale=10pt]{FiraMono}
+%\usepackage[scale=0.85]{DejaVuSansMono}
+
+%\usepackage[scale=0.85]{sourcecodepro}
+
+\usepackage[scaled=0.80]{DejaVuSansMono}
+%\usepackage[scale=0.85]{inconsolata}
+%\usepackage[scale=0.82]{GoMono}
+\newcommand{\un}{\underline{ }}
+% \newcommand{\idx}[1]{\index[metodo]{{\tt #1}}}
+
+
+\definecolor{mygray}{rgb}{0.42,0.42,0.42}
+\usepackage{upquote}
+
+\lstset{
+  language=Python,
+  showstringspaces=false,
+  numberstyle= \scriptsize,
+  numbers=left,
+  xleftmargin=1em,
+  xrightmargin=0.4em,
+  numbersep=5pt,
+  formfeed=\newpage,
+  tabsize=4,
+  commentstyle=\color{mygray}\itshape,
+  %basicstyle=\footnotesize\fontfamily{fvm}\selectfont,%\small\ttfamily,
+  basicstyle=\ttfamily,
+  frame=single,
+  literate= {ç}{{\c c}}1  {ú}{{\'u}}1 {í}{{\'i}}1 {â}{{\^a}}1 {ó}{{\'o}}1 {õ}{{\~o}}1 {á}{{\'a}}1 {ã}{{\~a}}1 {é}{{\'e}}1 {É}{{\'E}}1 {ê}{{\^e}}1 {ô}{{\^o}}1 {à}{{\`a}}1,
+  morekeywords={srange, lambda}
+}
+
+
+
+\begin{document}
+\pagenumbering{arabic}
+\thispagestyle{empty}
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+{\bf ATUALIZAÇÃOES PARA O SAGEMATH 9 }
+\end{center}
+
+\noindent
+Silva, L., Santos, M., Machado, R. \textit{Elementos de Computação Matemática com SageMath}. SBM. Rio de Janeiro. 2019.
+
+
+\vspace{1cm}
+
+A versão do SageMath usada no livro foi a 8.7 que usa o Python 2. 
+A partir do SageMath 9.0 o Python 3 será usado, com isso algumas melhorias de otimização vieram, mas precisamos nos adaptar as pequenas alterações na sintaxe.
+
+%Em relação aos tópicos abordados no livro, três elementos sofreram alterações, dois na sintaxe e um no output. O que sofreu alteração no output, não tem problema no uso ao longo dos códigos.
+
+\section*{Mudança na sintaxe}
+
+
+Sofreram alteração na sintaxe:
+\verb|print| e \verb|raw_input|.
+Antes, para usar o print, bastava colocar o objeto a ser "printado" ao lado direito do print, por exemplo:
+\begin{lstlisting}[frame=e, numbers=none, xleftmargin=0em]
+sage: print 'a'
+ 'a'
+\end{lstlisting}
+
+Agora, precisamos colocar o objeto dentro do parênteses, por exemplo:
+\begin{lstlisting}[frame=e, numbers=none, xleftmargin=0em]
+sage: print('a')
+ 'a' 
+\end{lstlisting}
+
+A sintaxe do \verb|raw_input| mudou para \verb|input|.
+
+\section*{Mudança na saída}
+
+
+A saída do método \verb|range| mudou.
+Antes, era assim:
+\begin{lstlisting}[frame=e, numbers=none, xleftmargin=0em]
+sage: range(5)
+ [0, 1, 2, 3, 4]
+\end{lstlisting}
+
+Agora, está assim:
+\begin{lstlisting}[frame=e, numbers=none, xleftmargin=0em]
+sage: range(5)
+ range(0, 5)
+\end{lstlisting}
+
+Para obter a mesma visualização de antes, escrevemos o seguinte:
+\begin{lstlisting}[frame=e, numbers=none, xleftmargin=0em]
+sage: list(range(5))
+ [0, 1, 2, 3, 4] 
+\end{lstlisting}
+
+
+
+%Explicar que essa diferença veio para otimizar o software, fazendo que ele gaste menos memória ram.
+
+
+Observe que os códigos envolvendo \verb|range| continuam funcionando da mesma forma. Exemplos:
+\begin{lstlisting}[frame=e, numbers=none, xleftmargin=0em]
+sage: range(5)[2]
+ 2
+\end{lstlisting}
+e
+\begin{lstlisting}[frame=e, numbers=none, xleftmargin=0em]
+sage: for i in range(3):
+....:     print(i)
+ 0
+ 1
+ 2
+\end{lstlisting}
+
+Na página seguinte, citamos as mudanças necessárias nos códigos do livro, para funcionar no SageMath 9.0.
+
+\newpage
+
+
+\noindent
+{ \large Capítulo 2 - SageMath: Primeiros Passos}
+
+\begin{itemize}
+ \item Sem modificações
+\end{itemize}
+
+
+\vspace{0.5cm}
+\noindent
+{ \large Capítulo 3 - Introdução à Programação com Sage}
+\begin{itemize}
+ \item Aplicar a função \verb|list()|:
+ \begin{itemize}
+ \item Na página 72, aplicar a função \verb|list()| ao método \verb|range|. 
+ 
+ 
+ \item Na página 78, linha -2, troque o último \verb|z| por \verb|list(z)|.
+ 
+ \item Nas páginas 79, aplicar a função \verb|list()| aos métodos \verb|zip| e \verb|map|.
+ 
+ \item Na página 81, linhas 23 e 35, aplicar a função \verb|list()| aos comandos \verb|dic_poligono.keys()| e\\ \verb|dic_poligono.values()|.
+ \end{itemize}
+
+
+ 
+ \item Adicionar parênteses no método \verb|print|:
+ \begin{itemize}
+  
+\item Nas páginas 83, 84, 85, 86, 88, 89, 90, 92, 95, 97, 102, 104, 105, 108 e 109, colocar parênteses no método \verb|print|.
+ \end{itemize}
+ 
+ 
+ 
+ \item Mudança na sintaxe:
+\begin{itemize}
+ \item Na página 108, linha 4 do código, troque \verb|raw_input| por \verb|input|.
+\end{itemize}
+
+\end{itemize}
+
+\vspace{1cm}
+
+\noindent
+{\large Capítulo 4 - Matemática Elementar}
+
+\begin{itemize}
+ \item Na página 144,  colocar parênteses no método \verb|print|.
+\end{itemize}
+
+
+
+\vspace{0.5cm}
+\noindent
+{\large Capítulo 5 - Vetores, Matrizes e Álgebra Linear}
+
+
+\begin{itemize}
+
+\item Sem modificações
+
+%  \item Na página 164, linha 5, o método \verb|adjoint| será trocado por \verb|adjugate| (o método \verb|adjoint| vai continuar funcionando por um tempo). {\bf não colocar}
+% 
+%  \item Na página 191, a função \verb|complemento_ortogonal_livro| deixou de funcionar, pois o SageMath 9.0 não está entendendo que os elementos de \verb|base_do_compl|, na linha 13, são vetores de \verb|V|. Para contornar este problema, adicione, entre as linhas 13 e 14, o código abaixo: {\bf ERRATA}
+% \begin{lstlisting}[frame=e, numbers=none, xleftmargin=0em]
+% temp=[]
+% for w in base_do_compl:
+%     temp.append(V(w))
+% base_do_compl = temp
+% \end{lstlisting}
+% \item Na página 215, na última linha, antes de \verb|A.is_similar(B)|, escreva:{\bf ERRATA}
+% \begin{lstlisting}[frame=e, numbers=none, xleftmargin=0em]
+% sage: A = A.change_ring(QQbar)
+% sage: B = B.change_ring(QQbar)
+% \end{lstlisting}
+
+\end{itemize}
+
+
+\vspace{0.5cm}
+\noindent
+{\large Capítulo 6 - Plot 2D}
+
+
+\begin{itemize}
+\item Sem modificações
+
+%  \item Na página 235, Exemplo 6.16, o SageMath 9.0 não está gostando do latex. {\bf não colocar}
+% 
+%  \item Na página 247, Exemplo 6.28, O limite inferior 0, precisa ser trocado por um valor positivo. Do jeito que está ainda funciona. {\bf não colocar}
+\end{itemize}
+
+
+
+\vspace{0.5cm}
+\noindent
+{\large Capítulo 7 - Plot 3D}
+
+
+\begin{itemize}
+ \item Sem modificações
+\end{itemize}
+
+
+\vspace{0.5cm}
+\noindent
+{\large Capítulo 8 - Cálculo Diferencial e Integral}
+
+
+\begin{itemize}
+ %\item Na página 313, Exemplo 8.34, não está terminando o cálculo.
+ \item Na página 335, Colocar parênteses no \verb|print|.
+\end{itemize}
+
+
+\vspace{0.5cm}
+\noindent
+{\large Capítulo 9 - Equações Diferenciais Ordinárias}
+
+
+\begin{itemize}
+
+
+
+\item Na página 383, linha -2, retire o parâmetro \verb|color=hue(1./3*i)| para gerar uma visualização monocromátrica.
+
+\end{itemize}
+
+
+\vspace{0.5cm}
+\noindent
+{\large Capítulo 10 - Soluções de Problemas com Sage}
+
+
+\begin{itemize}
+ \item Na página 399, linhas 3 e 4 do código, aplicar a função \verb|list()| ao método \verb|range|.
+ \item Na página 400, colocar parênteses no método \verb|print|. 
+ %\item Na página 400, última linha, trocar \verb|ticks=[Ox, Oy]| por \verb|ticks=[list(Ox),list(Oy)]|.
+ \item Na página 401, colocar parênteses no método \verb|print| da linha 11 do código. 
+ \item Na página 402, colocar parênteses no método \verb|print| da linha 2 do código. 
+\end{itemize}
+
+
+
+% 
+% {
+% \setlength{\extrarowheight}{1.5pt}
+% \begin{tabular}{|c|c|c|}
+% \hline
+% a & Row 1 & classe $C^2$ \\ \hline
+% b & Row 2 & fdgtd\\ \hline
+% 
+% \end{tabular}
+% }
+
+
+% 
+% \centering
+% 
+% \begin{tabular}{l l l }
+% \toprule
+% \textbf{Operação} & \textbf{Sintaxe} & \textbf{Exemplo}  \\
+% \midrule
+% $\displaystyle\lim\limits_{x\to a}f(x)$ &  \verb|limit(f, x=a)|\index[metodo]{{\tt limit}} &   \ref{example1}  \\
+% 
+% $\displaystyle\lim\limits_{x\to +\infty}f(x)$ &\verb|limit(f, x=+infinity)| &   \ref{example6} \\
+% 
+% $\displaystyle\lim_{x\to -\infty}f(x)$ & \verb|limit(f, x=-infinity)| &   \ref{example6}\\
+% 
+% $\displaystyle\lim_{x\to a^+}f(x)$ & \verb|limit(f, x=a, dir='+')| &   \ref{example7}\\
+% $\displaystyle\lim_{x\to a^-}f(x)$ & \verb|limit(f, x=a, dir='-')|  &   \ref{example8}\\
+% \bottomrule
+% \end{tabular}
+% \caption{Operações de limite de funções.}\label{limite_de_funções}
+% \end{table}
+
+
+\end{document}

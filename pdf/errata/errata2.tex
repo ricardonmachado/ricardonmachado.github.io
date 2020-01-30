@@ -1,0 +1,147 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{indentfirst}
+\usepackage{amssymb,amsmath,amsthm,amsfonts,amscd}	%s�mbolos e caracteres especiais
+\usepackage{empheq}
+\usepackage{latexsym}
+
+\usepackage{graphicx,graphics,epsfig}								%para inserir figuras
+\usepackage{graphpap}										%pictures
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage[brazil]{babel}
+
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage[normalem]{ulem}
+\usepackage[a4paper,top=20mm,bottom=20mm,left=20mm,right=20mm]{geometry}
+\usepackage{textcomp}
+\usepackage{amsthm}
+\usepackage[normalem]{ulem}
+\usepackage{multicol}
+
+
+\newtheorem{q}{}
+
+
+\usepackage{array}
+
+
+
+\usepackage{tcolorbox}% cria caixas para inserir texto
+\tcbset{boxrule=0.2mm,colback=white} % configuração da caixa tcolorbox
+\usepackage{verbatim}
+\usepackage{enumitem} % Customize lists
+%\usepackage{index}
+% \usepackage{splitidx}
+\usepackage{listings}
+\lstset{
+    escapeinside={(*}{*)}
+}
+%\usepackage[scale=0.85]{beramono}
+% \usepackage{imakeidx}
+%\usepackage[scale=10pt]{FiraMono}
+%\usepackage[scale=0.85]{DejaVuSansMono}
+
+%\usepackage[scale=0.85]{sourcecodepro}
+
+\usepackage[scaled=0.80]{DejaVuSansMono}
+%\usepackage[scale=0.85]{inconsolata}
+%\usepackage[scale=0.82]{GoMono}
+\newcommand{\un}{\underline{ }}
+% \newcommand{\idx}[1]{\index[metodo]{{\tt #1}}}
+
+
+\definecolor{mygray}{rgb}{0.42,0.42,0.42}
+\usepackage{upquote}
+
+\lstset{
+  language=Python,
+  showstringspaces=false,
+  numberstyle= \scriptsize,
+  numbers=left,
+  xleftmargin=1em,
+  xrightmargin=0.4em,
+  numbersep=5pt,
+  formfeed=\newpage,
+  tabsize=4,
+  commentstyle=\color{mygray}\itshape,
+  %basicstyle=\footnotesize\fontfamily{fvm}\selectfont,%\small\ttfamily,
+  basicstyle=\ttfamily,
+  frame=single,
+  literate= {ç}{{\c c}}1  {ú}{{\'u}}1 {í}{{\'i}}1 {â}{{\^a}}1 {ó}{{\'o}}1 {õ}{{\~o}}1 {á}{{\'a}}1 {ã}{{\~a}}1 {é}{{\'e}}1 {É}{{\'E}}1 {ê}{{\^e}}1 {ô}{{\^o}}1 {à}{{\`a}}1,
+  morekeywords={srange, lambda}
+}
+
+
+\begin{document}
+\pagenumbering{arabic}
+\thispagestyle{empty}
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+{\bf ERRATA}
+\end{center}
+
+\noindent
+Silva, L., Santos, M., Machado, R. \textit{Elementos de Computação Matemática com SageMath}. SBM. Rio de Janeiro. 2019.
+
+
+% folha, linha, onde se lê, leia-se
+
+\vspace{1cm}
+
+\noindent
+{\bf Correções nos textos:}
+\vspace{1cm}
+
+%\centering
+\setlength{\extrarowheight}{1.5pt}
+\begin{tabular}{|c|c|c|c|}
+\hline
+ ~~ Página ~~ & ~~ Linha ~~ & ~~~~~~~~ Onde se lê ~~~~~~~~ & ~~~~~~~~~~~~ Leia-se ~~~~~~~~~~~~ \\
+\hline \hline
+ 72 & 8 & o último é \verb|j-k| & 
+ \begin{tabular}
+ o último é o maior \\ termo menor que \verb|j|  
+ \end{tabular}\\ \hline
+ 303 & 1 & classe $C^1$  & classe $C^2$ \\ \hline
+ & & & \\ \hline
+\end{tabular}
+
+\vspace{1cm}
+
+\noindent
+{\bf Correções nos códigos:}
+
+
+\begin{itemize}
+
+ \item Na página 191, adicione na função \verb|complemento_ortogonal_livro| entre as linhas 13 e 14 do código:
+\begin{lstlisting}[frame=e, numbers=none, xleftmargin=0em]
+temp=[]
+for w in base_do_compl:
+    temp.append(V(w))
+base_do_compl = temp
+\end{lstlisting}
+\item Na página 215, na última linha, antes de \verb|A.is_similar(B)|, escreva:
+\begin{lstlisting}[frame=e, numbers=none, xleftmargin=0em]
+sage: A = A.change_ring(QQbar)
+sage: B = B.change_ring(QQbar)
+\end{lstlisting}
+
+\end{itemize}
+
+
+
+
+
+\end{document}
