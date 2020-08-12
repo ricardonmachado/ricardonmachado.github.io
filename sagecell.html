@@ -766,18 +766,6 @@ integral(integral(x-y,(y,2*x,2)),(x,0,1))</script>
   <tbody>
 
 
-
-
-    <tr>
-      <th scope="row">$\displaystyle{{5}\choose{2}}$</th>
-        <td>
-        <div class="compute">  
-<script type="text/x-sage">binomial(5,2)</script>
-        </td>
-    </tr> 
- 
-
-
     <tr>
       <th scope="row">$5!$</th>
         <td>
@@ -788,6 +776,118 @@ integral(integral(x-y,(y,2*x,2)),(x,0,1))</script>
 
 
     <tr>
+      <th scope="row">Permutações da lista: [1, 2, 3, 4]</th>
+        <td>
+        <div class="compute">  
+<script type="text/x-sage">Permutations([1, 2, 3, 4]).list()</script>
+        </td>
+    </tr> 
+
+
+    <tr>
+      <th scope="row">$C_5^2$ ou $\displaystyle{{5}\choose{2}}$</th>
+        <td>
+        <div class="compute">  
+<script type="text/x-sage">binomial(5,2)</script>
+        </td>
+    </tr> 
+ 
+    <tr>
+      <th scope="row">Combinações 3 a 3 da lista: [1, 2, 3, 4, 5]</th>
+        <td>
+        <div class="compute">  
+<script type="text/x-sage">A = set([1, 2, 3, 4, 5])
+B = Combinations(A, 3)
+B.list()</script>
+        </td>
+    </tr> 
+
+
+    <tr>
+      <th scope="row">Permutação circular $PC(12)$</th>
+        <td>
+        <div class="compute">  
+<script type="text/x-sage">PC(n) = factorial(n-1)
+PC(12)</script>
+        </td>
+    </tr> 
+
+
+    <tr>
+      <th scope="row">Permutação com repetição $PR_8^{4, 2}$</th>
+        <td>
+        <div class="compute">  
+<script type="text/x-sage">def PR(*lista):
+    p = factorial(lista[0])
+    for i in lista[1:]:
+        p = p/factorial(i)
+    return p
+PR(8, 4, 2)</script>
+        </td>
+    </tr> 
+
+
+    <tr>
+      <th scope="row">Combinação Completa $CR_5^{12}$</th>
+        <td>
+        <div class="compute">  
+<script type="text/x-sage">CR(n, p) = binomial(p+n-1, p)
+CR(5, 12)</script>
+        </td>
+    </tr> 
+
+
+    <tr>
+      <th scope="row">Número de permutações caóticas com 5 elementos: $D_5$</th>
+        <td>
+        <div class="compute">  
+<script type="text/x-sage">def D(n):
+    d = 0
+    for i in range(n+1):
+        d = d + (-1)^(i)*(factorial(n)/factorial(i))
+    return d
+D(5)</script>
+        </td>
+    </tr> 
+
+
+    <tr>
+      <th scope="row">Lista das Permutações Caóticas com 4 elementos</th>
+        <td>
+        <div class="compute">  
+<script type="text/x-sage">def permutacoes_caoticas(n):
+    p = Permutations(n)
+    pl = p.list()
+    for i in p:
+        for j in i:
+            if i.index(j) == j-1:
+                pl.remove(i)
+                break
+    return pl
+permutacoes_caoticas(4)</script>
+        </td>
+    </tr> 
+
+
+    <tr>
+      <th scope="row">1º Lema de Kaplansky: K(10, 3)</th>
+        <td>
+        <div class="compute">  
+<script type="text/x-sage">K(n,p) = binomial(n-p+1, p)
+K(10,3)</script>
+        </td>
+    </tr> 
+
+    <tr>
+      <th scope="row">2º Lema de Kaplansky: KC(7, 3)</th>
+        <td>
+        <div class="compute">  
+<script type="text/x-sage">KC(n,p) = (n/(n-p))*binomial(n-p, p)
+KC(7,3)</script>
+        </td>
+    </tr> 
+
+    <tr>
       <th scope="row">Expansão de $(3x^2+1)^2(x-7)^3$</th>
         <td>
         <div class="compute">  
@@ -795,21 +895,14 @@ integral(integral(x-y,(y,2*x,2)),(x,0,1))</script>
         </td>
     </tr> 
 
-
     <tr>
-      <th scope="row">Permutação caótica de 5: $D_5$</th>
+      <th scope="row">Coeficientes de $(x^3-x +5)^8$</th>
         <td>
         <div class="compute">  
-<script type="text/x-sage">def D_n(num):
-    t = (factorial(num)/e).n()
-    r = abs(floor(t)-t)
-    if r < 1/2:
-        return floor(t)
-    else:
-        return floor(t)+1
-D_n(5)</script>
+<script type="text/x-sage">((x^3-x +5)^8).coefficients()</script>
         </td>
     </tr> 
+
 
 
   </tbody>
